@@ -30,10 +30,10 @@
     </configure>
     <configure component="SolARSLAMMapping">
         <property name="minWeightNeighbor" type="float" value="5.0"/>
-        <property name="maxNbNeighborKfs" type="int" value="8"/>
+        <property name="maxNbNeighborKfs" type="int" value="5"/>
         <property name="nbPassedFrameAtLeast" type="int" value="1"/>
         <property name="ratioCPRefKeyframe" type="float" value="0.5"/>
-        <property name="minTrackedPoints" type="int" value="200"/>
+        <property name="minTrackedPoints" type="int" value="100"/>
     </configure>
     <configure component="SolARMapManager">
         <property name="directory" type="string" value="../../data/map_hololens/mapA"/>
@@ -49,7 +49,7 @@
     <configure component="SolARKeypointDetectorOpencv">
         <property name="type" type="string" value="AKAZE2"/>
         <property name="imageRatio" type="float" value="1.0"/>
-        <property name="nbDescriptors" type="int" value="2000"/>
+        <property name="nbDescriptors" type="int" value="1000"/>
         <property name="nbOctaves" type="int" value="4"/>
         <property name="threshold" type="float" value="0.0001"/>
         <property name="borderRatio" type="float" value="0.0"/>
@@ -64,7 +64,7 @@
         <property name="threshold" type="float" value="3e-4"/>
     </configure>
     <configure component="SolARDescriptorsExtractorSIFTOpencv">
-        <property name="nbFeatures" type="int" value="2000"/>
+        <property name="nbFeatures" type="int" value="1000"/>
         <property name="nbOctaveLayers" type="int" value="4"/>
     </configure>
     <configure component="SolARDescriptorMatcherKNNOpencv">
@@ -137,10 +137,10 @@
         </property>
     </configure>
     <configure component="SolAROptimizationG2O">
-        <property name="nbIterationsLocal" type="int" value="10"/>
+        <property name="nbIterationsLocal" type="int" value="5"/>
         <property name="nbIterationsGlobal" type="int" value="20"/>
         <property name="setVerbose" type="int" value="0"/>
-        <property name="nbMaxFixedKeyframes" type="int" value="20"/>
+        <property name="nbMaxFixedKeyframes" type="int" value="50"/>
         <property name="errorOutlier" type="float" value="5.0"/>
         <property name="useSpanningTree" type="int" value="0"/>
         <property name="isRobust" type="int" value="0"/>
@@ -148,10 +148,10 @@
         <property name="fixedKeyframes" type="int" value="0"/>
     </configure>
     <configure component="SolAROptimizationG2O" name="BundleFixedKeyframesProperties">
-        <property name="nbIterationsLocal" type="int" value="10"/>
+        <property name="nbIterationsLocal" type="int" value="5"/>
         <property name="nbIterationsGlobal" type="int" value="20"/>
         <property name="setVerbose" type="int" value="0"/>
-        <property name="nbMaxFixedKeyframes" type="int" value="20"/>
+        <property name="nbMaxFixedKeyframes" type="int" value="50"/>
         <property name="errorOutlier" type="float" value="5.0"/>
         <property name="useSpanningTree" type="int" value="0"/>
         <property name="isRobust" type="int" value="0"/>
