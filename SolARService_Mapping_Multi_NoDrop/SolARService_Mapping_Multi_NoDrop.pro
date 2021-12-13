@@ -88,6 +88,7 @@ DISTFILES += \
     SolARService_Mapping_Multi_NoDrop_modules.xml \
     SolARService_Mapping_Multi_NoDrop_properties.xml \
     docker/build.sh \
+    docker/launch.bat \
     docker/mapping-nodrop-service-manifest.yaml \
     packagedependencies.txt \
     docker/build.sh \
