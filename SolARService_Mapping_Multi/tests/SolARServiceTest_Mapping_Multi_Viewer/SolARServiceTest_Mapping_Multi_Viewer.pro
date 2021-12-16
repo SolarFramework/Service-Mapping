@@ -6,10 +6,12 @@ CONFIG += c++1z
 CONFIG += console
 CONFIG -= qt
 
-DEFINES += MYVERSION=$${VERSION}
+DEFINES += MYVERSION=\"\\\"$${VERSION}\\\"\"
 DEFINES += WITHREMOTING
 
 include(findremakenrules.pri)
+
+include(../../../manualincludepath.pri)
 
 CONFIG(debug,debug|release) {
     TARGETDEPLOYDIR = $${PWD}/../../../bin/Debug
