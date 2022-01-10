@@ -34,6 +34,7 @@
         <property name="nbPassedFrameAtLeast" type="int" value="1"/>
         <property name="ratioCPRefKeyframe" type="float" value="0.5"/>
         <property name="minTrackedPoints" type="int" value="100"/>
+        <property name="nbVisibilityAtLeast" type="int" value="2"/>
     </configure>
     <configure component="SolARMapManager">
         <property name="directory" type="string" value="../../data/map_hololens/mapA"/>
@@ -177,7 +178,6 @@
         <property name="outputImageWidth" type="int" value="640" description="The width in pixels of the corrected image."/>
         <property name="outputImageHeight" type="int" value="480" description="The width in pixels of the corrected image."/>
     </configure>
-
 </properties>
 
 </xpcf-registry>
