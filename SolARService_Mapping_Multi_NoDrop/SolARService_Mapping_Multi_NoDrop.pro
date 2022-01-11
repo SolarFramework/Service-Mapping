@@ -13,6 +13,8 @@ DEFINES += WITHREMOTING
 
 include(findremakenrules.pri)
 
+include(../manualincludepath.pri)
+
 CONFIG(debug,debug|release) {
     TARGETDEPLOYDIR = $${PWD}/../bin/Debug
     DEFINES += _DEBUG=1
@@ -88,6 +90,7 @@ DISTFILES += \
     SolARService_Mapping_Multi_NoDrop_modules.xml \
     SolARService_Mapping_Multi_NoDrop_properties.xml \
     docker/build.sh \
+    docker/launch.bat \
     docker/mapping-nodrop-service-manifest.yaml \
     packagedependencies.txt \
     docker/build.sh \
