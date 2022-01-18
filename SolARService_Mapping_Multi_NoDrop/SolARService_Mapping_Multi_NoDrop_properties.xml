@@ -17,6 +17,18 @@
         <property name="channelCredentials" access="rw" type="uint" value="0"/>
     </configure>
 
+    <configure component="IMappingPipeline_grpcServer">
+      <property name="grpc_compress_server" type="string">
+        <value>method|getDataForVisualization|deflate|0</value>
+      </property>
+    </configure>
+
+    <configure component="IMapUpdatePipeline_grpcProxy">
+      <property name="grpc_compress_proxy" type="string">
+        <value>method|mapUpdateRequest|none|none</value>
+      </property>
+    </configure>
+
     <!-- mapping pipeline configuration -->
     <configure component="SolARSLAMBootstrapper">
                 <property name="hasPose" type="int" value="1"/>
