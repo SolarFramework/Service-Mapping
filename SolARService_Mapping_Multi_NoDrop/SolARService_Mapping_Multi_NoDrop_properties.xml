@@ -131,7 +131,7 @@
         <property name="iterationsCount" type="int" value="500"/>
         <property name="reprojError" type="float" value="3.0"/>
         <property name="confidence" type="float" value="0.9"/>
-        <property name="minNbInliers" type="int" value="20"/>
+        <property name="minNbInliers" type="int" value="30"/>
     </configure>
     <configure component="SolARPoseFinderFrom2D2DOpencv">
         <property name="confidence" type="float" value="0.99"/>
@@ -171,26 +171,6 @@
         <property name="fixedMap" type="int" value="0"/>
         <property name="fixedKeyframes" type="int" value="1"/>
     </configure>
-    <configure component="SolARMarker2DSquaredBinaryOpencv">
-        <property name="filePath" type="string" value="fiducialMarker.yml" description="Path of the .yml file describing the fiducial marker."/>
-    </configure>
-    <configure component="SolARImageFilterBinaryOpencv">
-        <property name="min" type="int" value="-1" description="minimum threshold (-1 to automatically compute it on the global image"/>
-        <property name="max" type="int" value="255" description="maximum threshold"/>
-    </configure>
-    <configure component="SolARContoursExtractorOpencv">
-        <property name="minContourEdges" type="int" value="4" description="Minimum number of edge to validate a contour (default = 4)"/>
-    </configure>
-    <configure component="SolARContoursFilterBinaryMarkerOpencv">
-        <property name="epsilon" type="float" value="0.05" description="The maximum distance between the original curve and its approximation (default = 0.05)"/>
-        <property name="minContourLength" type="float" value="20.0" description="The minimum length of an edge of the contour in pixels to be considered as valid (default = 20)."/>
-        <property name="minDistanceBetweenContourCorners" type="float" value="10.0" description="The minimum average distance in pixels between corners of a contour and the same corners of another contour to consider the contour as valid (default = 10)"/>
-    </configure>
-    <configure component="SolARPerspectiveControllerOpencv">
-        <property name="outputImageWidth" type="int" value="640" description="The width in pixels of the corrected image."/>
-        <property name="outputImageHeight" type="int" value="480" description="The width in pixels of the corrected image."/>
-    </configure>
-
 </properties>
 
 </xpcf-registry>
