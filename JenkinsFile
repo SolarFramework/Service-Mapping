@@ -12,7 +12,6 @@ node("master") {
          SolARService_Mapping_Multi/tests/SolARServiceTest_Mapping_Multi_Viewer,\
          SolARService_Mapping_Multi/tests/SolARServiceTest_Mapping_Multi_Relocalization,\
          SolARService_Mapping_Multi_NoDrop"
-        makeTarget="install install_deps"
         android=false
 		win=false
         packageScripts="bundleServices"
