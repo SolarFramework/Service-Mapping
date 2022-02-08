@@ -41,7 +41,7 @@
         <property name="thresAngleViewDirection" type="float" value="0.8"/>
     </configure>
     <configure component="SolARSLAMMapping">
-        <property name="minWeightNeighbor" type="float" value="10.0"/>
+        <property name="minWeightNeighbor" type="float" value="5.0"/>
         <property name="maxNbNeighborKfs" type="int" value="8"/>
         <property name="nbPassedFrameAtLeast" type="int" value="2"/>
         <property name="ratioCPRefKeyframe" type="float" value="0.5"/>
@@ -112,7 +112,7 @@
     </configure>
     <configure component="SolARMapFilter">
         <property name="reprojErrorThreshold" type="float" value="5.0"/>
-        <property name="minTriangulationAngle" type="float" value="0.01"/>
+        <property name="minTriangulationAngle" type="float" value="0.02"/>
         <property name="maxTriangulationAngle" type="float" value="2.0"/>
         <property name="cheiralityCheck" type="int" value="1"/>
     </configure>
