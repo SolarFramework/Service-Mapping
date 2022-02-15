@@ -31,8 +31,11 @@ CONFIG(release,debug|release) {
 
 win32:CONFIG -= static
 win32:CONFIG += shared
+
 QMAKE_TARGET.arch = x86_64 #must be defined prior to include
+
 DEPENDENCIESCONFIG = shared install_recurse
+
 PROJECTCONFIG = QTVS
 
 #NOTE : CONFIG as staticlib or sharedlib,  DEPENDENCIESCONFIG as staticlib or sharedlib, QMAKE_TARGET.arch and PROJECTDEPLOYDIR MUST BE DEFINED BEFORE templatelibconfig.pri inclusion
@@ -49,6 +52,9 @@ SOURCES += \
 unix {
     LIBS += -ldl
     QMAKE_CXXFLAGS += -DBOOST_LOG_DYN_LINK
+
+    # Avoids adding install steps manually. To be commented to have a better control over them.
+    QMAKE_POST_LINK += "make install install_deps"
 }
 
 linux {
@@ -85,6 +91,7 @@ linux {
     CONFIG(debug,debug|release) {
         run_install.extra = cp $$files($${PWD}/start_mapping_multi_service_debug.sh) $${PWD}/start_mapping_multi_service.sh
     }
+    run_install.CONFIG += nostrip
     INSTALLS += run_install
 }
 
