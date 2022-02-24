@@ -297,16 +297,24 @@ int main(int argc, char* argv[])
             LOG_INFO("Remote producer client: Set mapping pipeline camera parameters result = {}",
                      getReturnCodeTextValue(result));
 
-            LOG_INFO("Remote producer client: Start remote mapping pipeline");
+            if (result == FrameworkReturnCode::_SUCCESS) {
 
-            if (gMappingPipelineMulti->start() == FrameworkReturnCode::_SUCCESS) {
-                LOG_INFO("Start remote producer client thread");
+                LOG_INFO("Remote producer client: Start remote mapping pipeline");
 
-                gClientProducerTask  = new xpcf::DelegateTask(fnClientProducer);
-                gClientProducerTask->start();
+                if (gMappingPipelineMulti->start() == FrameworkReturnCode::_SUCCESS) {
+                    LOG_INFO("Start remote producer client thread");
+
+                    gClientProducerTask  = new xpcf::DelegateTask(fnClientProducer);
+                    gClientProducerTask->start();
+                }
+                else {
+                    LOG_ERROR("Cannot start mapping pipeline");
+                    return -1;
+                }
             }
             else {
-                LOG_ERROR("Cannot start mapping pipeline");
+                LOG_ERROR("Cannot initialize mapping pipeline");
+                return -1;
             }
         }
         else {

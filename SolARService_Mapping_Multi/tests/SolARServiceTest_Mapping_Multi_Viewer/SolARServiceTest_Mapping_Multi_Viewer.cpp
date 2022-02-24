@@ -40,7 +40,7 @@ namespace xpcf=org::bcom::xpcf;
 #define INDEX_USE_CAMERA 0
 
 // Delay between 2 requests to Mapping service (in seconds)
-#define DELAY_BETWEEN_REQUESTS 2
+#define DELAY_BETWEEN_REQUESTS 5
 
 // Global XPCF Component Manager
 SRef<xpcf::IComponentManager> gXpcfComponentManager = 0;
