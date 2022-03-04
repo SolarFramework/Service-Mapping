@@ -110,7 +110,9 @@ DISTFILES += \
 
 xml_files.path = $${TARGETDEPLOYDIR}
 xml_files.files =  $$files($${PWD}/SolARService_Mapping_Multi_NoDrop_modules.xml) \
-                   $$files($${PWD}/SolARService_Mapping_Multi_NoDrop_properties.xml)
+                   $$files($${PWD}/SolARService_Mapping_Multi_NoDrop_properties.xml) \
+                   $$files($${PWD}/SolARService_Mapping_Multi_NoDrop_modules_cuda.xml) \
+                   $$files($${PWD}/SolARService_Mapping_Multi_NoDrop_properties_cuda.xml)
 
 INSTALLS += xml_files
 
