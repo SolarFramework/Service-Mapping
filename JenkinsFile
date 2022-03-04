@@ -13,7 +13,7 @@ node("master") {
          SolARService_Mapping_Multi/tests/SolARServiceTest_Mapping_Multi_Relocalization,\
          SolARService_Mapping_Multi_NoDrop"
         android=false
-		win=false
+	win=false
         packageScripts="bundleServices"
     }
 
