@@ -28,7 +28,7 @@ fi
 
 echo "Try to replace the Relocalization Service URL in the XML configuration file..."
 
-sed -i -e "s/RELOCALIZATION_SERVICE_URL/$RELOCALIZATION_SERVICE_URL/g" /.xpcf/SolARService_Mapping_Multi_properties.xml
+sed -i -e "s/RELOCALIZATION_SERVICE_URL/$RELOCALIZATION_SERVICE_URL/g" /.xpcf/SolARService_Mapping_Multi_NoDrop_properties.xml
 
 echo "XML configuration file ready"
 
