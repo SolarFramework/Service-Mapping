@@ -7,6 +7,7 @@ QMAKE_PROJECT_DEPTH = 0
 ## global defintions : target lib name, version
 TARGET = SolARServiceTest_Mapping_Multi_Producer
 VERSION=0.11.0
+PROJECTDEPLOYDIR = $${PWD}/../../..
 
 DEFINES += MYVERSION=\"\\\"$${VERSION}\\\"\"
 DEFINES += WITHREMOTING
@@ -16,13 +17,11 @@ CONFIG += console
 include(findremakenrules.pri)
 
 CONFIG(debug,debug|release) {
-    PROJECTDEPLOYDIR = $${PWD}/../../..
     DEFINES += _DEBUG=1
     DEFINES += DEBUG=1
 }
 
 CONFIG(release,debug|release) {
-    PROJECTDEPLOYDIR = $${PWD}/../../..
     DEFINES += _NDEBUG=1
     DEFINES += NDEBUG=1
 }
