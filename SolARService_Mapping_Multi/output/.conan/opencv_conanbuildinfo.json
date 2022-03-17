@@ -1,0 +1,1838 @@
+{
+  "deps_env_info": {
+    "PATH": [
+      "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/bin",
+      "/home/solar/.conan/data/jbig/20160605/_/_/package/d8fff784e71b40316e752103c83b4698d094b5e3/bin",
+      "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/bin",
+      "/home/solar/.conan/data/bzip2/1.0.8/_/_/package/b27e2b40bcb70be2e7d6f0e0c6e43e35c530f8d3/bin",
+      "/home/solar/.conan/data/libiconv/1.16/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/bin",
+      "/home/solar/.conan/data/libsndfile/1.0.31/_/_/package/7b27e8b53a56da86d719376b94670eca057a195f/bin"
+    ],
+    "FT2_CONFIG": "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/bin/freetype-config",
+    "ALSA_CONFIG_DIR": "/home/solar/.conan/data/libalsa/1.1.9/_/_/package/bff9a7d5ab267a535181ec5b36392417340ff035/res/alsa"
+  },
+  "deps_user_info": {
+    "opencv": {},
+    "jasper": {},
+    "openexr": {},
+    "libtiff": {},
+    "eigen": {},
+    "quirc": {},
+    "gtk": {},
+    "protobuf": {},
+    "ffmpeg": {},
+    "libjpeg": {},
+    "libdeflate": {},
+    "xz_utils": {},
+    "jbig": {},
+    "zstd": {},
+    "libwebp": {},
+    "freetype": {
+      "LIBTOOL_VERSION": "23.4.17"
+    },
+    "openjpeg": {},
+    "openh264": {},
+    "libx264": {},
+    "libx265": {},
+    "libvpx": {},
+    "libmp3lame": {},
+    "libfdk_aac": {},
+    "pulseaudio": {},
+    "libpng": {},
+    "bzip2": {},
+    "libiconv": {},
+    "brotli": {},
+    "openssl": {},
+    "libalsa": {},
+    "xorg": {},
+    "libsndfile": {},
+    "libcap": {},
+    "zlib": {},
+    "vorbis": {},
+    "opus": {},
+    "flac": {},
+    "ogg": {}
+  },
+  "dependencies": [
+    {
+      "version": "4.5.2",
+      "description": "OpenCV (Open Source Computer Vision Library)",
+      "rootpath": "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e/include",
+        "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e/include/opencv4"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e/",
+        "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e/lib/cmake"
+      ],
+      "res_paths": [
+        "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e/res"
+      ],
+      "libs": [
+        "opencv_ml",
+        "opencv_photo",
+        "opencv_highgui",
+        "opencv_videoio",
+        "opencv_imgcodecs",
+        "opencv_objdetect",
+        "opencv_stitching",
+        "opencv_video",
+        "opencv_calib3d",
+        "opencv_features2d",
+        "opencv_flann",
+        "opencv_dnn",
+        "opencv_imgproc",
+        "opencv_core"
+      ],
+      "system_libs": [
+        "dl",
+        "m",
+        "pthread",
+        "rt"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {
+        "cmake_find_package": "OpenCV",
+        "cmake_find_package_multi": "OpenCV"
+      },
+      "build_modules": {},
+      "build_modules_paths": {
+        "cmake_find_package": [
+          "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e/lib/cmake/conan-official-opencv-targets.cmake"
+        ],
+        "cmake_find_package_multi": [
+          "/home/solar/.conan/data/opencv/4.5.2/conan-solar/stable/package/a82b52f161966d5f02980911208ca1c2ada7da3e/lib/cmake/conan-official-opencv-targets.cmake"
+        ]
+      },
+      "cppflags": [],
+      "name": "opencv"
+    },
+    {
+      "version": "2.0.32",
+      "description": "JasPer Image Processing/Coding Tool Kit",
+      "rootpath": "/home/solar/.conan/data/jasper/2.0.32/_/_/package/97c3250efc42815531a250c966a1a8a5532fb507",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/jasper/2.0.32/_/_/package/97c3250efc42815531a250c966a1a8a5532fb507/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/jasper/2.0.32/_/_/package/97c3250efc42815531a250c966a1a8a5532fb507/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/jasper/2.0.32/_/_/package/97c3250efc42815531a250c966a1a8a5532fb507/",
+        "/home/solar/.conan/data/jasper/2.0.32/_/_/package/97c3250efc42815531a250c966a1a8a5532fb507/lib/cmake"
+      ],
+      "res_paths": [],
+      "libs": [
+        "jasper"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "Jasper",
+        "cmake_find_package_multi": "Jasper",
+        "pkg_config": "jasper"
+      },
+      "filenames": {},
+      "build_modules": {
+        "cmake_find_package": [
+          "lib/cmake/conan-official-jasper-variables.cmake"
+        ]
+      },
+      "build_modules_paths": {
+        "cmake_find_package": [
+          "/home/solar/.conan/data/jasper/2.0.32/_/_/package/97c3250efc42815531a250c966a1a8a5532fb507/lib/cmake/conan-official-jasper-variables.cmake"
+        ]
+      },
+      "cppflags": [],
+      "name": "jasper"
+    },
+    {
+      "version": "2.5.5",
+      "description": "OpenEXR is a high dynamic-range (HDR) image file format developed by Industrial Light & Magic for use in computer imaging applications.",
+      "rootpath": "/home/solar/.conan/data/openexr/2.5.5/_/_/package/3a22597ac13c7758f454e161ce59bd69f2dd867c",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/openexr/2.5.5/_/_/package/3a22597ac13c7758f454e161ce59bd69f2dd867c/include",
+        "/home/solar/.conan/data/openexr/2.5.5/_/_/package/3a22597ac13c7758f454e161ce59bd69f2dd867c/include/OpenEXR"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/openexr/2.5.5/_/_/package/3a22597ac13c7758f454e161ce59bd69f2dd867c/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/openexr/2.5.5/_/_/package/3a22597ac13c7758f454e161ce59bd69f2dd867c/",
+        "/home/solar/.conan/data/openexr/2.5.5/_/_/package/3a22597ac13c7758f454e161ce59bd69f2dd867c/lib/cmake"
+      ],
+      "res_paths": [],
+      "libs": [
+        "IlmImfUtil-2_5",
+        "IlmImf-2_5",
+        "Imath-2_5",
+        "Half-2_5",
+        "IexMath-2_5",
+        "IlmThread-2_5",
+        "Iex-2_5"
+      ],
+      "system_libs": [
+        "stdc++",
+        "pthread"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "OpenEXR",
+        "cmake_find_package_multi": "OpenEXR",
+        "pkg_config": "openexr_full_package"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {
+        "cmake_find_package": [
+          "/home/solar/.conan/data/openexr/2.5.5/_/_/package/3a22597ac13c7758f454e161ce59bd69f2dd867c/lib/cmake/conan-official-openexr-targets.cmake"
+        ],
+        "cmake_find_package_multi": [
+          "/home/solar/.conan/data/openexr/2.5.5/_/_/package/3a22597ac13c7758f454e161ce59bd69f2dd867c/lib/cmake/conan-official-openexr-targets.cmake"
+        ]
+      },
+      "cppflags": [],
+      "name": "openexr"
+    },
+    {
+      "version": "4.2.0",
+      "description": "Library for Tag Image File Format (TIFF)",
+      "rootpath": "/home/solar/.conan/data/libtiff/4.2.0/_/_/package/f7f98480ba1ccb6a4e8aefcf7a825c604da4e868",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libtiff/4.2.0/_/_/package/f7f98480ba1ccb6a4e8aefcf7a825c604da4e868/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libtiff/4.2.0/_/_/package/f7f98480ba1ccb6a4e8aefcf7a825c604da4e868/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libtiff/4.2.0/_/_/package/f7f98480ba1ccb6a4e8aefcf7a825c604da4e868/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "tiffxx",
+        "tiff"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "TIFF",
+        "cmake_find_package_multi": "TIFF",
+        "pkg_config": "libtiff-4"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libtiff"
+    },
+    {
+      "version": "3.3.9",
+      "description": "Eigen is a C++ template library for linear algebra: matrices, vectors,                    numerical solvers, and related algorithms.",
+      "rootpath": "/home/solar/.conan/data/eigen/3.3.9/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/eigen/3.3.9/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include/eigen3"
+      ],
+      "lib_paths": [],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/eigen/3.3.9/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/"
+      ],
+      "res_paths": [],
+      "libs": [],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "Eigen3",
+        "cmake_find_package_multi": "Eigen3",
+        "pkg_config": "eigen3"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "eigen"
+    },
+    {
+      "version": "1.1",
+      "description": "QR decoder library",
+      "rootpath": "/home/solar/.conan/data/quirc/1.1/_/_/package/7dd9b7ca058603edfa49de37d8a95d3d274efd6f",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/quirc/1.1/_/_/package/7dd9b7ca058603edfa49de37d8a95d3d274efd6f/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/quirc/1.1/_/_/package/7dd9b7ca058603edfa49de37d8a95d3d274efd6f/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/quirc/1.1/_/_/package/7dd9b7ca058603edfa49de37d8a95d3d274efd6f/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "quirc"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "quirc"
+    },
+    {
+      "version": "system",
+      "description": "A free and open-source cross-platform widget toolkit for creating graphical user interfaces",
+      "rootpath": "/home/solar/.conan/data/gtk/system/_/_/package/cc5e5ca8b619d2dffaaeae1e4924ae3ce085a8f1",
+      "sysroot": "",
+      "include_paths": [
+        "/usr/include/gtk-2.0",
+        "/usr/lib/x86_64-linux-gnu/gtk-2.0/include",
+        "/usr/include/gio-unix-2.0/",
+        "/usr/include/cairo",
+        "/usr/include/pango-1.0",
+        "/usr/include/atk-1.0",
+        "/usr/include/cairo",
+        "/usr/include/pixman-1",
+        "/usr/include/gdk-pixbuf-2.0",
+        "/usr/include/libpng16",
+        "/usr/include/pango-1.0",
+        "/usr/include/harfbuzz",
+        "/usr/include/pango-1.0",
+        "/usr/include/glib-2.0",
+        "/usr/lib/x86_64-linux-gnu/glib-2.0/include",
+        "/usr/include/freetype2",
+        "/usr/include/libpng16",
+        "/usr/include/freetype2",
+        "/usr/include/libpng16"
+      ],
+      "lib_paths": [
+        "/usr/lib/x86_64-linux-gnu"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/gtk/system/_/_/package/cc5e5ca8b619d2dffaaeae1e4924ae3ce085a8f1/"
+      ],
+      "res_paths": [],
+      "libs": [],
+      "system_libs": [
+        "gtk-x11-2.0",
+        "gdk-x11-2.0",
+        "pangocairo-1.0",
+        "atk-1.0",
+        "cairo",
+        "gdk_pixbuf-2.0",
+        "gio-2.0",
+        "pangoft2-1.0",
+        "pango-1.0",
+        "gobject-2.0",
+        "glib-2.0",
+        "fontconfig",
+        "freetype"
+      ],
+      "defines": [],
+      "cflags": [
+        "-pthread"
+      ],
+      "cxxflags": [
+        "-pthread"
+      ],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [
+        "-pthread"
+      ],
+      "name": "gtk"
+    },
+    {
+      "version": "3.17.1",
+      "description": "Protocol Buffers - Google's data interchange format",
+      "rootpath": "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/",
+        "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf"
+      ],
+      "res_paths": [],
+      "libs": [
+        "protoc",
+        "protobuf"
+      ],
+      "system_libs": [
+        "pthread"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "protobuf",
+        "cmake_find_package_multi": "protobuf",
+        "pkg_config": "protobuf_full_package"
+      },
+      "filenames": {
+        "cmake_find_package": "Protobuf",
+        "cmake_find_package_multi": "protobuf"
+      },
+      "build_modules": {},
+      "build_modules_paths": {
+        "cmake": [
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-generate.cmake",
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-module.cmake",
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-options.cmake"
+        ],
+        "cmake_multi": [
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-generate.cmake",
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-module.cmake",
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-options.cmake"
+        ],
+        "cmake_find_package": [
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-generate.cmake",
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-module.cmake",
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-options.cmake"
+        ],
+        "cmake_find_package_multi": [
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-generate.cmake",
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-module.cmake",
+          "/home/solar/.conan/data/protobuf/3.17.1/_/_/package/288a6dd4649a27085b12a83170a28362490be284/lib/cmake/protobuf/protobuf-options.cmake"
+        ]
+      },
+      "cppflags": [],
+      "name": "protobuf"
+    },
+    {
+      "version": "4.2.1",
+      "description": "A complete, cross-platform solution to record, convert and stream audio and video",
+      "rootpath": "/home/solar/.conan/data/ffmpeg/4.2.1/conan-solar/stable/package/f0e190994537100c4620574949d320bad2d3cd46",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/ffmpeg/4.2.1/conan-solar/stable/package/f0e190994537100c4620574949d320bad2d3cd46/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/ffmpeg/4.2.1/conan-solar/stable/package/f0e190994537100c4620574949d320bad2d3cd46/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/ffmpeg/4.2.1/conan-solar/stable/package/f0e190994537100c4620574949d320bad2d3cd46/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "avdevice",
+        "avfilter",
+        "avformat",
+        "avcodec",
+        "swresample",
+        "swscale",
+        "postproc",
+        "avutil"
+      ],
+      "system_libs": [
+        "dl",
+        "pthread",
+        "va",
+        "va-drm",
+        "va-x11",
+        "vdpau",
+        "X11",
+        "xcb-shm",
+        "xcb-shape",
+        "xcb-xfixes"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [
+        "-Wl,-Bsymbolic"
+      ],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "ffmpeg"
+    },
+    {
+      "version": "9d",
+      "description": "Libjpeg is a widely used C library for reading and writing JPEG image files.",
+      "rootpath": "/home/solar/.conan/data/libjpeg/9d/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libjpeg/9d/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libjpeg/9d/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libjpeg/9d/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [
+        "/home/solar/.conan/data/libjpeg/9d/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/res"
+      ],
+      "libs": [
+        "jpeg"
+      ],
+      "system_libs": [],
+      "defines": [
+        "LIBJPEG_STATIC"
+      ],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "JPEG",
+        "cmake_find_package_multi": "JPEG",
+        "pkg_config": "libjpeg"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libjpeg"
+    },
+    {
+      "version": "1.7",
+      "description": "Heavily optimized library for DEFLATE/zlib/gzip compression and decompression.",
+      "rootpath": "/home/solar/.conan/data/libdeflate/1.7/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libdeflate/1.7/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libdeflate/1.7/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libdeflate/1.7/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "deflate"
+      ],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libdeflate"
+    },
+    {
+      "version": "5.2.5",
+      "description": "XZ Utils is free general-purpose data compression software with a high compression ratio. XZ Utils were written for POSIX-like systems, but also work on some not-so-POSIX systems. XZ Utils are the successor to LZMA Utils.",
+      "rootpath": "/home/solar/.conan/data/xz_utils/5.2.5/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/xz_utils/5.2.5/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/xz_utils/5.2.5/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/xz_utils/5.2.5/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/xz_utils/5.2.5/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/",
+        "/home/solar/.conan/data/xz_utils/5.2.5/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib/cmake"
+      ],
+      "res_paths": [],
+      "libs": [
+        "lzma"
+      ],
+      "system_libs": [
+        "pthread"
+      ],
+      "defines": [
+        "LZMA_API_STATIC"
+      ],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "pkg_config": "liblzma",
+        "cmake_find_package": "LibLZMA",
+        "cmake_find_package_multi": "LibLZMA"
+      },
+      "filenames": {},
+      "build_modules": {
+        "cmake_find_package": [
+          "lib/cmake/conan-official-xz_utils-variables.cmake"
+        ]
+      },
+      "build_modules_paths": {
+        "cmake_find_package": [
+          "/home/solar/.conan/data/xz_utils/5.2.5/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib/cmake/conan-official-xz_utils-variables.cmake"
+        ]
+      },
+      "cppflags": [],
+      "name": "xz_utils"
+    },
+    {
+      "version": "20160605",
+      "description": "jbig for the Windows build of ImageMagick",
+      "rootpath": "/home/solar/.conan/data/jbig/20160605/_/_/package/d8fff784e71b40316e752103c83b4698d094b5e3",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/jbig/20160605/_/_/package/d8fff784e71b40316e752103c83b4698d094b5e3/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/jbig/20160605/_/_/package/d8fff784e71b40316e752103c83b4698d094b5e3/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/jbig/20160605/_/_/package/d8fff784e71b40316e752103c83b4698d094b5e3/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/jbig/20160605/_/_/package/d8fff784e71b40316e752103c83b4698d094b5e3/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "jbig"
+      ],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "jbig"
+    },
+    {
+      "version": "1.5.0",
+      "description": "Zstandard - Fast real-time compression algorithm",
+      "rootpath": "/home/solar/.conan/data/zstd/1.5.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/zstd/1.5.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/zstd/1.5.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/zstd/1.5.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "zstd"
+      ],
+      "system_libs": [
+        "pthread"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "zstd"
+    },
+    {
+      "version": "1.2.0",
+      "description": "Library to encode and decode images in WebP format",
+      "rootpath": "/home/solar/.conan/data/libwebp/1.2.0/_/_/package/6322a9a56f029bb63526b01c9e32f1e334e3f0cb",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libwebp/1.2.0/_/_/package/6322a9a56f029bb63526b01c9e32f1e334e3f0cb/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libwebp/1.2.0/_/_/package/6322a9a56f029bb63526b01c9e32f1e334e3f0cb/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libwebp/1.2.0/_/_/package/6322a9a56f029bb63526b01c9e32f1e334e3f0cb/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "webpdecoder",
+        "webpdemux",
+        "webpmux",
+        "webp"
+      ],
+      "system_libs": [
+        "pthread",
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "WebP",
+        "cmake_find_package_multi": "WebP"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libwebp"
+    },
+    {
+      "version": "2.10.4",
+      "description": "FreeType is a freely available software library to render fonts.",
+      "rootpath": "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/include",
+        "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/include/freetype2"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/",
+        "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/lib/cmake"
+      ],
+      "res_paths": [
+        "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/res"
+      ],
+      "libs": [
+        "freetype"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "Freetype",
+        "cmake_find_package_multi": "Freetype",
+        "pkg_config": "freetype2"
+      },
+      "filenames": {
+        "cmake_find_package": "Freetype",
+        "cmake_find_package_multi": "freetype"
+      },
+      "build_modules": {
+        "cmake_find_package": [
+          "lib/cmake/conan-official-freetype-variables.cmake"
+        ],
+        "cmake_find_package_multi": [
+          "lib/cmake/conan-official-freetype-targets.cmake"
+        ]
+      },
+      "build_modules_paths": {
+        "cmake_find_package": [
+          "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/lib/cmake/conan-official-freetype-variables.cmake"
+        ],
+        "cmake_find_package_multi": [
+          "/home/solar/.conan/data/freetype/2.10.4/_/_/package/718e788d18f87efa6b201b7718f1ffac72f4ad26/lib/cmake/conan-official-freetype-targets.cmake"
+        ]
+      },
+      "cppflags": [],
+      "name": "freetype"
+    },
+    {
+      "version": "2.4.0",
+      "description": "OpenJPEG is an open-source JPEG 2000 codec written in C language.",
+      "rootpath": "/home/solar/.conan/data/openjpeg/2.4.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/openjpeg/2.4.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include",
+        "/home/solar/.conan/data/openjpeg/2.4.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include/openjpeg-2.4"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/openjpeg/2.4.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/openjpeg/2.4.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "openjp2"
+      ],
+      "system_libs": [
+        "pthread",
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "OpenJPEG",
+        "cmake_find_package_multi": "OpenJPEG",
+        "pkg_config": "libopenjp2"
+      },
+      "filenames": {},
+      "build_modules": {
+        "cmake_find_package": [
+          "lib/cmake/conan-official-openjpeg-targets.cmake"
+        ],
+        "cmake_find_package_multi": [
+          "lib/cmake/conan-official-openjpeg-targets.cmake"
+        ]
+      },
+      "build_modules_paths": {
+        "cmake_find_package": [
+          "/home/solar/.conan/data/openjpeg/2.4.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib/cmake/conan-official-openjpeg-targets.cmake"
+        ],
+        "cmake_find_package_multi": [
+          "/home/solar/.conan/data/openjpeg/2.4.0/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib/cmake/conan-official-openjpeg-targets.cmake"
+        ]
+      },
+      "cppflags": [],
+      "name": "openjpeg"
+    },
+    {
+      "version": "1.7.0",
+      "description": "Open Source H.264 Codec",
+      "rootpath": "/home/solar/.conan/data/openh264/1.7.0/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/openh264/1.7.0/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/openh264/1.7.0/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/openh264/1.7.0/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "openh264"
+      ],
+      "system_libs": [
+        "m",
+        "pthread",
+        "stdc++"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "pkg_config": "openh264"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "openh264"
+    },
+    {
+      "version": "20190605",
+      "description": "x264 is a free software library and application for encoding video streams into the H.264/MPEG-4 AVC compression format",
+      "rootpath": "/home/solar/.conan/data/libx264/20190605/_/_/package/e238797c0a1f214eb9f54dcf2951947779f25d89",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libx264/20190605/_/_/package/e238797c0a1f214eb9f54dcf2951947779f25d89/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libx264/20190605/_/_/package/e238797c0a1f214eb9f54dcf2951947779f25d89/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libx264/20190605/_/_/package/e238797c0a1f214eb9f54dcf2951947779f25d89/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "x264"
+      ],
+      "system_libs": [
+        "dl",
+        "pthread",
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "pkg_config": "x264"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libx264"
+    },
+    {
+      "version": "3.4",
+      "description": "x265 is the leading H.265 / HEVC encoder software library",
+      "rootpath": "/home/solar/.conan/data/libx265/3.4/_/_/package/f836b03ccbf25b3b939fde0ab04d373d59e8c15c",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libx265/3.4/_/_/package/f836b03ccbf25b3b939fde0ab04d373d59e8c15c/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libx265/3.4/_/_/package/f836b03ccbf25b3b939fde0ab04d373d59e8c15c/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libx265/3.4/_/_/package/f836b03ccbf25b3b939fde0ab04d373d59e8c15c/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "x265"
+      ],
+      "system_libs": [
+        "dl",
+        "pthread",
+        "m",
+        "stdc++"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [
+        "-Wl,-Bsymbolic,-znoexecstack"
+      ],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "pkg_config": "x265"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libx265"
+    },
+    {
+      "version": "1.9.0",
+      "description": "WebM VP8/VP9 Codec SDK",
+      "rootpath": "/home/solar/.conan/data/libvpx/1.9.0/_/_/package/4bb67626b568764fa359d81c74feb29589c0af91",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libvpx/1.9.0/_/_/package/4bb67626b568764fa359d81c74feb29589c0af91/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libvpx/1.9.0/_/_/package/4bb67626b568764fa359d81c74feb29589c0af91/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libvpx/1.9.0/_/_/package/4bb67626b568764fa359d81c74feb29589c0af91/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "vpx"
+      ],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libvpx"
+    },
+    {
+      "version": "3.100",
+      "description": "LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.",
+      "rootpath": "/home/solar/.conan/data/libmp3lame/3.100/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libmp3lame/3.100/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libmp3lame/3.100/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libmp3lame/3.100/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "mp3lame"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libmp3lame"
+    },
+    {
+      "version": "2.0.0",
+      "description": "A standalone library of the Fraunhofer FDK AAC code from Android",
+      "rootpath": "/home/solar/.conan/data/libfdk_aac/2.0.0/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libfdk_aac/2.0.0/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libfdk_aac/2.0.0/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libfdk_aac/2.0.0/_/_/package/aa4b42a29a137462803bc7c56a64efa1039e98e4/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "fdk-aac"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "pkg_config": "fdk-aac"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libfdk_aac"
+    },
+    {
+      "version": "13.0",
+      "description": "PulseAudio is a sound system for POSIX OSes, meaning that it is a proxy for sound applications.",
+      "rootpath": "/home/solar/.conan/data/pulseaudio/13.0/_/_/package/53c89fe9b500d5cb24ff209317dbcfe9c5987b19",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/pulseaudio/13.0/_/_/package/53c89fe9b500d5cb24ff209317dbcfe9c5987b19/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/pulseaudio/13.0/_/_/package/53c89fe9b500d5cb24ff209317dbcfe9c5987b19/lib",
+        "/home/solar/.conan/data/pulseaudio/13.0/_/_/package/53c89fe9b500d5cb24ff209317dbcfe9c5987b19/lib/pulseaudio"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/pulseaudio/13.0/_/_/package/53c89fe9b500d5cb24ff209317dbcfe9c5987b19/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/pulseaudio/13.0/_/_/package/53c89fe9b500d5cb24ff209317dbcfe9c5987b19/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "pulse-simple",
+        "pulse",
+        "pulsecommon-13.0"
+      ],
+      "system_libs": [],
+      "defines": [
+        "_REENTRANT"
+      ],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "pulseaudio"
+    },
+    {
+      "version": "1.6.37",
+      "description": "libpng is the official PNG file format reference library.",
+      "rootpath": "/home/solar/.conan/data/libpng/1.6.37/_/_/package/9378b660d2155d53cea1126fa13164a3bfa59f2c",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libpng/1.6.37/_/_/package/9378b660d2155d53cea1126fa13164a3bfa59f2c/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libpng/1.6.37/_/_/package/9378b660d2155d53cea1126fa13164a3bfa59f2c/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libpng/1.6.37/_/_/package/9378b660d2155d53cea1126fa13164a3bfa59f2c/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "png16"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "PNG",
+        "cmake_find_package_multi": "PNG",
+        "pkg_config": "libpng"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libpng"
+    },
+    {
+      "version": "1.0.8",
+      "description": "bzip2 is a free and open-source file compression program that uses the Burrows Wheeler algorithm.",
+      "rootpath": "/home/solar/.conan/data/bzip2/1.0.8/_/_/package/b27e2b40bcb70be2e7d6f0e0c6e43e35c530f8d3",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/bzip2/1.0.8/_/_/package/b27e2b40bcb70be2e7d6f0e0c6e43e35c530f8d3/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/bzip2/1.0.8/_/_/package/b27e2b40bcb70be2e7d6f0e0c6e43e35c530f8d3/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/bzip2/1.0.8/_/_/package/b27e2b40bcb70be2e7d6f0e0c6e43e35c530f8d3/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/bzip2/1.0.8/_/_/package/b27e2b40bcb70be2e7d6f0e0c6e43e35c530f8d3/",
+        "/home/solar/.conan/data/bzip2/1.0.8/_/_/package/b27e2b40bcb70be2e7d6f0e0c6e43e35c530f8d3/lib/cmake"
+      ],
+      "res_paths": [],
+      "libs": [
+        "bz2"
+      ],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "BZip2",
+        "cmake_find_package_multi": "BZip2"
+      },
+      "filenames": {},
+      "build_modules": {
+        "cmake_find_package": [
+          "lib/cmake/conan-official-bzip2-variables.cmake"
+        ]
+      },
+      "build_modules_paths": {
+        "cmake_find_package": [
+          "/home/solar/.conan/data/bzip2/1.0.8/_/_/package/b27e2b40bcb70be2e7d6f0e0c6e43e35c530f8d3/lib/cmake/conan-official-bzip2-variables.cmake"
+        ]
+      },
+      "cppflags": [],
+      "name": "bzip2"
+    },
+    {
+      "version": "1.16",
+      "description": "Convert text to and from Unicode",
+      "rootpath": "/home/solar/.conan/data/libiconv/1.16/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libiconv/1.16/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libiconv/1.16/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/libiconv/1.16/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/libiconv/1.16/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "iconv",
+        "charset"
+      ],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "Iconv",
+        "cmake_find_package_multi": "Iconv"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libiconv"
+    },
+    {
+      "version": "1.0.9",
+      "description": "Brotli compression format",
+      "rootpath": "/home/solar/.conan/data/brotli/1.0.9/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/brotli/1.0.9/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include",
+        "/home/solar/.conan/data/brotli/1.0.9/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include/brotli"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/brotli/1.0.9/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/brotli/1.0.9/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "brotlidec-static",
+        "brotlienc-static",
+        "brotlicommon-static"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "Brotli",
+        "cmake_find_package_multi": "Brotli"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "brotli"
+    },
+    {
+      "version": "1.1.1h",
+      "description": "A toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols",
+      "rootpath": "/home/solar/.conan/data/openssl/1.1.1h/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/openssl/1.1.1h/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/openssl/1.1.1h/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/openssl/1.1.1h/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/openssl/1.1.1h/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/",
+        "/home/solar/.conan/data/openssl/1.1.1h/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib/cmake"
+      ],
+      "res_paths": [],
+      "libs": [
+        "ssl",
+        "crypto"
+      ],
+      "system_libs": [
+        "dl",
+        "pthread",
+        "rt"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "OpenSSL",
+        "cmake_find_package_multi": "OpenSSL"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {
+        "cmake_find_package": [
+          "/home/solar/.conan/data/openssl/1.1.1h/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib/cmake/conan-official-openssl-variables.cmake"
+        ]
+      },
+      "cppflags": [],
+      "name": "openssl"
+    },
+    {
+      "version": "1.1.9",
+      "description": "Library of ALSA: The Advanced Linux Sound Architecture, that provides audio and MIDI functionality to the Linux operating system",
+      "rootpath": "/home/solar/.conan/data/libalsa/1.1.9/_/_/package/bff9a7d5ab267a535181ec5b36392417340ff035",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libalsa/1.1.9/_/_/package/bff9a7d5ab267a535181ec5b36392417340ff035/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libalsa/1.1.9/_/_/package/bff9a7d5ab267a535181ec5b36392417340ff035/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/libalsa/1.1.9/_/_/package/bff9a7d5ab267a535181ec5b36392417340ff035/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/libalsa/1.1.9/_/_/package/bff9a7d5ab267a535181ec5b36392417340ff035/"
+      ],
+      "res_paths": [
+        "/home/solar/.conan/data/libalsa/1.1.9/_/_/package/bff9a7d5ab267a535181ec5b36392417340ff035/res"
+      ],
+      "libs": [
+        "asound"
+      ],
+      "system_libs": [
+        "dl",
+        "m",
+        "rt",
+        "pthread"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "ALSA",
+        "cmake_find_package_multi": "ALSA",
+        "pkg_config": "alsa"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libalsa"
+    },
+    {
+      "version": "system",
+      "description": "The X.Org project provides an open source implementation of the X Window System.",
+      "rootpath": "/home/solar/.conan/data/xorg/system/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9",
+      "sysroot": "",
+      "include_paths": [
+        "/usr/include/freetype2",
+        "/usr/include/libpng16",
+        "/usr/include/freetype2",
+        "/usr/include/libpng16"
+      ],
+      "lib_paths": [
+        "/usr/lib/x86_64-linux-gnu"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/xorg/system/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/"
+      ],
+      "res_paths": [],
+      "libs": [],
+      "system_libs": [
+        "X11",
+        "X11-xcb",
+        "xcb",
+        "fontenc",
+        "ICE",
+        "SM",
+        "Xau",
+        "Xaw7",
+        "Xt",
+        "Xcomposite",
+        "Xcursor",
+        "Xdamage",
+        "Xfixes",
+        "Xdmcp",
+        "Xext",
+        "Xft",
+        "Xi",
+        "Xinerama",
+        "xkbfile",
+        "Xmu",
+        "Xmuu",
+        "Xpm",
+        "Xrandr",
+        "Xrender",
+        "XRes",
+        "Xss",
+        "Xtst",
+        "Xv",
+        "XvMC",
+        "Xxf86vm",
+        "xcb-xkb",
+        "xcb-icccm",
+        "xcb-image",
+        "xcb-shm",
+        "xcb-keysyms",
+        "xcb-randr",
+        "xcb-render",
+        "xcb-render-util",
+        "xcb-shape",
+        "xcb-sync",
+        "xcb-xfixes",
+        "xcb-xinerama",
+        "xcb-util",
+        "xcb-dri3"
+      ],
+      "defines": [
+        "_DEFAULT_SOURCE",
+        "_BSD_SOURCE",
+        "HAS_FCHOWN",
+        "HAS_STICKY_DIR_BIT"
+      ],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "xorg"
+    },
+    {
+      "version": "1.0.31",
+      "description": "Libsndfile is a library of C routines for reading and writing files containing sampled audio data.",
+      "rootpath": "/home/solar/.conan/data/libsndfile/1.0.31/_/_/package/7b27e8b53a56da86d719376b94670eca057a195f",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libsndfile/1.0.31/_/_/package/7b27e8b53a56da86d719376b94670eca057a195f/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libsndfile/1.0.31/_/_/package/7b27e8b53a56da86d719376b94670eca057a195f/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/libsndfile/1.0.31/_/_/package/7b27e8b53a56da86d719376b94670eca057a195f/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/libsndfile/1.0.31/_/_/package/7b27e8b53a56da86d719376b94670eca057a195f/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "sndfile"
+      ],
+      "system_libs": [
+        "m",
+        "dl",
+        "pthread",
+        "rt"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "SndFile",
+        "cmake_find_package_multi": "SndFile",
+        "pkg_config": "sndfile"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libsndfile"
+    },
+    {
+      "version": "2.50",
+      "description": "This is a library for getting and setting POSIX.1e (formerly POSIX 6) draft 15 capabilities",
+      "rootpath": "/home/solar/.conan/data/libcap/2.50/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/libcap/2.50/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/libcap/2.50/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/libcap/2.50/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "cap"
+      ],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {},
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "libcap"
+    },
+    {
+      "version": "1.2.11",
+      "description": "A Massively Spiffy Yet Delicately Unobtrusive Compression Library (Also Free, Not to Mention Unencumbered by Patents)",
+      "rootpath": "/home/solar/.conan/data/zlib/1.2.11/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/zlib/1.2.11/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/zlib/1.2.11/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/zlib/1.2.11/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "z"
+      ],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "ZLIB",
+        "cmake_find_package_multi": "ZLIB"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "zlib"
+    },
+    {
+      "version": "1.3.7",
+      "description": "The VORBIS audio codec library",
+      "rootpath": "/home/solar/.conan/data/vorbis/1.3.7/_/_/package/8d8cebdeda6ff46ba515968aa8b099a24769ca16",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/vorbis/1.3.7/_/_/package/8d8cebdeda6ff46ba515968aa8b099a24769ca16/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/vorbis/1.3.7/_/_/package/8d8cebdeda6ff46ba515968aa8b099a24769ca16/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/vorbis/1.3.7/_/_/package/8d8cebdeda6ff46ba515968aa8b099a24769ca16/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "vorbisenc",
+        "vorbisfile",
+        "vorbis"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "Vorbis",
+        "cmake_find_package_multi": "Vorbis",
+        "pkg_config": "vorbis-all-do-not-use"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "vorbis"
+    },
+    {
+      "version": "1.3.1",
+      "description": "Opus is a totally open, royalty-free, highly versatile audio codec.",
+      "rootpath": "/home/solar/.conan/data/opus/1.3.1/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/opus/1.3.1/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include",
+        "/home/solar/.conan/data/opus/1.3.1/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include/opus"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/opus/1.3.1/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/opus/1.3.1/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "opus"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "Opus",
+        "cmake_find_package_multi": "Opus"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "opus"
+    },
+    {
+      "version": "1.3.3",
+      "description": "Free Lossless Audio Codec",
+      "rootpath": "/home/solar/.conan/data/flac/1.3.3/_/_/package/c0788e3774a38e3be41691dac140809d9d89f13c",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/flac/1.3.3/_/_/package/c0788e3774a38e3be41691dac140809d9d89f13c/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/flac/1.3.3/_/_/package/c0788e3774a38e3be41691dac140809d9d89f13c/lib"
+      ],
+      "bin_paths": [
+        "/home/solar/.conan/data/flac/1.3.3/_/_/package/c0788e3774a38e3be41691dac140809d9d89f13c/bin"
+      ],
+      "build_paths": [
+        "/home/solar/.conan/data/flac/1.3.3/_/_/package/c0788e3774a38e3be41691dac140809d9d89f13c/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "FLAC++",
+        "FLAC"
+      ],
+      "system_libs": [
+        "m"
+      ],
+      "defines": [
+        "FLAC__NO_DLL"
+      ],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "FLAC",
+        "cmake_find_package_multi": "FLAC"
+      },
+      "filenames": {
+        "cmake_find_package": "flac",
+        "cmake_find_package_multi": "flac"
+      },
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "flac"
+    },
+    {
+      "version": "1.3.4",
+      "description": "The OGG library",
+      "rootpath": "/home/solar/.conan/data/ogg/1.3.4/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b",
+      "sysroot": "",
+      "include_paths": [
+        "/home/solar/.conan/data/ogg/1.3.4/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/include"
+      ],
+      "lib_paths": [
+        "/home/solar/.conan/data/ogg/1.3.4/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/lib"
+      ],
+      "bin_paths": [],
+      "build_paths": [
+        "/home/solar/.conan/data/ogg/1.3.4/_/_/package/d50a0d523d98c15bb147b18fa7d203887c38be8b/"
+      ],
+      "res_paths": [],
+      "libs": [
+        "ogg"
+      ],
+      "system_libs": [],
+      "defines": [],
+      "cflags": [],
+      "cxxflags": [],
+      "sharedlinkflags": [],
+      "exelinkflags": [],
+      "frameworks": [],
+      "framework_paths": [],
+      "names": {
+        "cmake_find_package": "Ogg",
+        "cmake_find_package_multi": "Ogg"
+      },
+      "filenames": {},
+      "build_modules": {},
+      "build_modules_paths": {},
+      "cppflags": [],
+      "name": "ogg"
+    }
+  ],
+  "settings": {
+    "arch": "x86_64",
+    "arch_build": "x86_64",
+    "build_type": "Release",
+    "compiler": "gcc",
+    "compiler.cppstd": "17",
+    "compiler.libcxx": "libstdc++11",
+    "compiler.version": "7",
+    "os": "Linux",
+    "os_build": "Linux"
+  },
+  "options": {
+    "opencv": {
+      "contrib": "False",
+      "detect_cpu_baseline": "False",
+      "dnn": "True",
+      "gtk_version": "system",
+      "parallel": "False",
+      "shared": "True",
+      "with_cuda": "False",
+      "with_eigen": "True",
+      "with_ffmpeg": "True",
+      "with_gtk": "True",
+      "with_jpeg": "libjpeg",
+      "with_jpeg2000": "jasper",
+      "with_openexr": "True",
+      "with_png": "True",
+      "with_quirc": "True",
+      "with_tiff": "True",
+      "with_v4l": "False",
+      "with_webp": "True",
+      "world": "False"
+    }
+  }
+}

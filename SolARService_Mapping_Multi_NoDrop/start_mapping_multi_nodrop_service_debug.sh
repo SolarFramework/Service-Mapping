@@ -18,6 +18,8 @@ export SOLAR_LOG_LEVEL=DEBUG
 
 ## Set Map Update service url
 export MAPUPDATE_SERVICE_URL=0.0.0.0:50053
+## Set Relocalization service url
+export RELOCALIZATION_SERVICE_URL=0.0.0.0:50052
 
 # include dependencies path to ld_library_path
 ld_library_path="./"
