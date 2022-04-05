@@ -28,6 +28,7 @@
 #include <signal.h>
 
 #include "core/Log.h"
+#include "core/Timer.h"
 #include "api/pipeline/IMappingPipeline.h"
 #include "api/display/I3DPointsViewer.h"
 
@@ -59,7 +60,7 @@ std::vector<SRef<CloudPoint>> pointClouds;
 std::vector<Transform3Df> keyframePoses;
 
 // Timer to manage delay between two requests to the Mapping service
-boost::timer timer_between_requests;
+Timer timer_between_requests;
 
 // print help options
 void print_help(const cxxopts::Options& options)
@@ -81,7 +82,7 @@ auto fnClientViewer = []() {
 //    std::vector<Transform3Df> keyframePoses;
 
     // Send request to Mapping service any DELAY_BETWEEN_REQUESTS seconds
-    if (timer_between_requests.elapsed() > DELAY_BETWEEN_REQUESTS) {
+    if (timer_between_requests.elapsed() > DELAY_BETWEEN_REQUESTS * 1000) {
 
         timer_between_requests.restart();
 
