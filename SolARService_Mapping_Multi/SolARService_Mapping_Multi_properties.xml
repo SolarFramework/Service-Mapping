@@ -44,7 +44,7 @@
         <property name="minWeightNeighbor" type="float" value="20.0"/>
         <property name="displayTrackedPoints" type="int" value="1"/>
         <property name="thresAngleViewDirection" type="float" value="0.8"/>
-		<property name="nbPassedFrameAtLeast" type="int" value="4"/>
+		<property name="nbPassedFrameAtLeast" type="int" value="2"/>
         <property name="ratioCPRefKeyframe" type="float" value="0.5"/>
         <property name="minTrackedPoints" type="int" value="200"/>
         <property name="nbVisibilityAtLeast" type="int" value="5"/>
@@ -106,8 +106,8 @@
         <property name="minNbInliers" type="int" value="15"/>
     </configure>
     <configure component="SolARMapFilter">
-        <property name="reprojErrorThreshold" type="float" value="3.0"/>
-        <property name="minTriangulationAngle" type="float" value="0.03"/>
+        <property name="reprojErrorThreshold" type="float" value="4.0"/>
+        <property name="minTriangulationAngle" type="float" value="0.02"/>
         <property name="maxTriangulationAngle" type="float" value="2.0"/>
         <property name="cheiralityCheck" type="int" value="1"/>
     </configure>

@@ -96,7 +96,9 @@ linux {
 
 DISTFILES += \
     SolARService_Mapping_Multi_modules.xml \
+    SolARService_Mapping_Multi_modules_cuda.xml \
     SolARService_Mapping_Multi_properties.xml \
+    SolARService_Mapping_Multi_properties_cuda.xml \
     docker/build.sh \
     docker/launch.bat \
     packagedependencies.txt \
