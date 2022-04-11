@@ -28,5 +28,5 @@ export RELOCALIZATION_SERVICE_URL=$2
 # Log level expected: DEBUG, CRITICAL, ERROR, INFO, TRACE, WARNING
 export SOLAR_LOG_LEVEL=INFO
 
-docker rm -f solarservicemappingmultinodrop
-docker run -d -p 50051:8080 -e SOLAR_LOG_LEVEL -e MAPUPDATE_SERVICE_URL -e RELOCALIZATION_SERVICE_URL -e "SERVICE_NAME=SolARServiceMappingMultiNoDrop" --log-opt max-size=50m -e "SERVICE_TAGS=SolAR" --name solarservicemappingmultinodrop artwin/solar/services/mapping-multi-nodrop-service:latest
+docker rm -f solarservicemappingmulticuda
+docker run --gpus all -d -p 60051:8080 -e SOLAR_LOG_LEVEL -e MAPUPDATE_SERVICE_URL -e RELOCALIZATION_SERVICE_URL -e "SERVICE_NAME=SolARServiceMappingMultiCuda" --log-opt max-size=50m -e "SERVICE_TAGS=SolAR" --name solarservicemappingmulticuda artwin/solar/services/mapping-multi-cuda-service:latest
