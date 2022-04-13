@@ -96,9 +96,15 @@ linux {
 
 DISTFILES += \
     SolARService_Mapping_Multi_modules.xml \
+    SolARService_Mapping_Multi_modules_cuda.xml \
     SolARService_Mapping_Multi_properties.xml \
+    SolARService_Mapping_Multi_properties_cuda.xml \
+    docker/SolARServiceMappingMulti_cuda.dockerfile \
     docker/build.sh \
+    docker/build_cuda.sh \
     docker/launch.bat \
+    docker/launch_cuda.sh \
+    docker/start_server_cuda.sh \
     packagedependencies.txt \
     docker/build.sh \
     docker/launch.bat \
@@ -111,7 +117,9 @@ DISTFILES += \
 
 xml_files.path = $${TARGETDEPLOYDIR}
 xml_files.files =  $$files($${PWD}/SolARService_Mapping_Multi_modules.xml) \
-                   $$files($${PWD}/SolARService_Mapping_Multi_properties.xml)
+                   $$files($${PWD}/SolARService_Mapping_Multi_properties.xml) \
+                   $$files($${PWD}/SolARService_Mapping_Multi_modules_cuda.xml) \
+                   $$files($${PWD}/SolARService_Mapping_Multi_properties_cuda.xml)
 
 INSTALLS += xml_files
 

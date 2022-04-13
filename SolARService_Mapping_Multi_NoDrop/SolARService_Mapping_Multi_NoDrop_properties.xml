@@ -44,14 +44,14 @@
         <property name="minWeightNeighbor" type="float" value="20.0"/>
         <property name="displayTrackedPoints" type="int" value="1"/>
         <property name="thresAngleViewDirection" type="float" value="0.8"/>
-    </configure>
-    <configure component="SolARSLAMMapping">
-        <property name="minWeightNeighbor" type="float" value="10.0"/>
-        <property name="maxNbNeighborKfs" type="int" value="8"/>
-        <property name="nbPassedFrameAtLeast" type="int" value="2"/>
+		<property name="nbPassedFrameAtLeast" type="int" value="2"/>
         <property name="ratioCPRefKeyframe" type="float" value="0.5"/>
         <property name="minTrackedPoints" type="int" value="200"/>
         <property name="nbVisibilityAtLeast" type="int" value="5"/>
+    </configure>
+    <configure component="SolARSLAMMapping">
+        <property name="minWeightNeighbor" type="float" value="5.0"/>
+        <property name="maxNbNeighborKfs" type="int" value="8"/>        
     </configure>
     <configure component="SolARMapManager">
         <property name="directory" type="string" value="../../../../data/map_hololens/mapA"/>
@@ -61,7 +61,7 @@
         <property name="keyframesManagerFileName" type="string" value="keyframes.bin"/>
         <property name="covisibilityGraphFileName" type="string" value="covisibility_graph.bin"/>
         <property name="keyframeRetrieverFileName" type="string" value="keyframe_retriever.bin"/>
-        <property name="reprojErrorThreshold" type="float" value="10.0"/>
+        <property name="reprojErrorThreshold" type="float" value="5.0"/>
         <property name="thresConfidence" type="float" value="0.03"/>
     </configure>
     <configure component="SolARKeypointDetectorOpencv">
@@ -116,8 +116,8 @@
         <property name="minNbInliers" type="int" value="15"/>
     </configure>
     <configure component="SolARMapFilter">
-        <property name="reprojErrorThreshold" type="float" value="5.0"/>
-        <property name="minTriangulationAngle" type="float" value="0.01"/>
+        <property name="reprojErrorThreshold" type="float" value="4.0"/>
+        <property name="minTriangulationAngle" type="float" value="0.02"/>
         <property name="maxTriangulationAngle" type="float" value="2.0"/>
         <property name="cheiralityCheck" type="int" value="1"/>
     </configure>
@@ -130,7 +130,7 @@
         <property name="threshold" type="float" value="0.01"/>
         <property name="level" type="int" value="3"/>
         <property name="matchingDistanceRatio" type="float" value="0.8"/>
-        <property name="matchingDistanceMax" type="float" value="800"/>
+        <property name="matchingDistanceMax" type="float" value="500"/>
     </configure>
     <configure component="SolAR3DTransformEstimationSACFrom3D3D">
         <property name="iterationsCount" type="int" value="500"/>
@@ -143,7 +143,7 @@
         <property name="outlierDistanceRatio" type="float" value="0.005"/>
     </configure>
     <configure component="SolARLoopClosureDetector">
-        <property name="minNbInliers" type="int" value="30"/>
+        <property name="minNbInliers" type="int" value="40"/>
     </configure>
     <configure component="SolARMatchesOverlayOpencv">
         <property name="thickness" type="uint" value="1"/>
@@ -155,7 +155,7 @@
         </property>
     </configure>
     <configure component="SolAROptimizationG2O">
-        <property name="nbIterationsLocal" type="int" value="5"/>
+        <property name="nbIterationsLocal" type="int" value="6"/>
         <property name="nbIterationsGlobal" type="int" value="20"/>
         <property name="setVerbose" type="int" value="0"/>
         <property name="nbMaxFixedKeyframes" type="int" value="20"/>
@@ -166,7 +166,7 @@
         <property name="fixedKeyframes" type="int" value="0"/>
     </configure>
     <configure component="SolAROptimizationG2O" name="BundleFixedKeyframesProperties">
-        <property name="nbIterationsLocal" type="int" value="5"/>
+        <property name="nbIterationsLocal" type="int" value="6"/>
         <property name="nbIterationsGlobal" type="int" value="20"/>
         <property name="setVerbose" type="int" value="0"/>
         <property name="nbMaxFixedKeyframes" type="int" value="20"/>

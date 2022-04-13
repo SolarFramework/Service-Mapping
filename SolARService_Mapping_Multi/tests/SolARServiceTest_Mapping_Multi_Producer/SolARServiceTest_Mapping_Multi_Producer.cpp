@@ -39,7 +39,7 @@ using namespace SolAR::datastructure;
 namespace xpcf=org::bcom::xpcf;
 
 
-#define INDEX_USE_CAMERA 0
+#define INDEX_USE_CAMERA 1
 
 // Global XPCF Component Manager
 SRef<xpcf::IComponentManager> gXpcfComponentManager = 0;
