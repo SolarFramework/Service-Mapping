@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM nvidia/cuda:11.4.0-base-ubuntu18.04
 MAINTAINER Christophe Cutullic christophe.cutullic@b-com.com
 
 ## Configure Ubuntu environment
@@ -7,26 +7,26 @@ RUN apt-get install -y libgtk2.0-dev
 RUN apt-get install -y libva-dev
 RUN apt-get install -y libvdpau-dev
 
-## Copy SolARServiceMappingMultiNoDrop app files
-RUN mkdir SolARServiceMappingMultiNoDrop
+## Copy SolARServiceMappingMulti app files
+RUN mkdir SolARServiceMappingMulti
 
 ## Data files (fbow vocabulary)
-RUN mkdir SolARServiceMappingMultiNoDrop/data
-RUN mkdir SolARServiceMappingMultiNoDrop/data/fbow_voc
-ADD data/fbow_voc/akaze.fbow /SolARServiceMappingMultiNoDrop/data/fbow_voc/
+RUN mkdir SolARServiceMappingMulti/data
+RUN mkdir SolARServiceMappingMulti/data/fbow_voc
+ADD data/fbow_voc/popsift_uint8.fbow /SolARServiceMappingMulti/data/fbow_voc/
 
 ## Libraries and modules
-RUN mkdir SolARServiceMappingMultiNoDrop/modules
-ADD modules/* /SolARServiceMappingMultiNoDrop/modules/
-ADD modules_no_cuda/* /SolARServiceMappingMultiNoDrop/modules/
+RUN mkdir SolARServiceMappingMulti/modules
+ADD modules/* /SolARServiceMappingMulti/modules/
+ADD modules_cuda/* /SolARServiceMappingMulti/modules/
 
 ## Project files
-ADD SolARService_Mapping_Multi_NoDrop /SolARServiceMappingMultiNoDrop/
-RUN chmod +x /SolARServiceMappingMultiNoDrop/SolARService_Mapping_Multi_NoDrop
+ADD SolARService_Mapping_Multi /SolARServiceMappingMulti/
+RUN chmod +x /SolARServiceMappingMulti/SolARService_Mapping_Multi
 RUN mkdir .xpcf
 ADD *.xml /.xpcf/
-ADD docker/start_server.sh .
-RUN chmod +x start_server.sh
+ADD docker/start_server_cuda.sh .
+RUN chmod +x start_server_cuda.sh
 
 ## Set application gRPC server url
 ENV XPCF_GRPC_SERVER_URL=0.0.0.0:8080
@@ -45,4 +45,4 @@ ENV RELOCALIZATION_SERVICE_URL=relocalization-service
 ENV SOLAR_LOG_LEVEL=INFO
 
 ## Run Server
-CMD [ "./start_server.sh"  ]
+CMD [ "./start_server_cuda.sh"  ]

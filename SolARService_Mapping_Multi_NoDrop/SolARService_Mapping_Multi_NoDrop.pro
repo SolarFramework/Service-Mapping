@@ -93,10 +93,16 @@ linux {
 
 DISTFILES += \
     SolARService_Mapping_Multi_NoDrop_modules.xml \
+    SolARService_Mapping_Multi_NoDrop_modules_cuda.xml \
     SolARService_Mapping_Multi_NoDrop_properties.xml \
+    SolARService_Mapping_Multi_NoDrop_properties_cuda.xml \
+    docker/SolARServiceMappingMultiNoDrop_cuda.dockerfile \
     docker/build.sh \
+    docker/build_cuda.sh \
     docker/launch.bat \
+    docker/launch_cuda.sh \
     docker/mapping-nodrop-service-manifest.yaml \
+    docker/start_server_cuda.sh \
     packagedependencies.txt \
     docker/build.sh \
     docker/launch.bat \

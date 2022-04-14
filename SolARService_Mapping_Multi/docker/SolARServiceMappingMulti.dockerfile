@@ -13,11 +13,12 @@ RUN mkdir SolARServiceMappingMulti
 ## Data files (fbow vocabulary)
 RUN mkdir SolARServiceMappingMulti/data
 RUN mkdir SolARServiceMappingMulti/data/fbow_voc
-ADD data/fbow_voc/* /SolARServiceMappingMulti/data/fbow_voc/
+ADD data/fbow_voc/akaze.fbow /SolARServiceMappingMulti/data/fbow_voc/
 
 ## Libraries and modules
 RUN mkdir SolARServiceMappingMulti/modules
 ADD modules/* /SolARServiceMappingMulti/modules/
+ADD modules_no_cuda/* /SolARServiceMappingMulti/modules/
 
 ## Project files
 ADD SolARService_Mapping_Multi /SolARServiceMappingMulti/
@@ -35,9 +36,9 @@ ENV XPCF_GRPC_MAX_RECV_MSG_SIZE=7000000
 ENV XPCF_GRPC_MAX_SEND_MSG_SIZE=-1
 
 ## Set url to Map Update Service
-ENV MAPUPDATE_SERVICE_URL=map-update-service:80
-## Set url to Map Update Service
-ENV RELOCALIZATION_SERVICE_URL=relocalization-service:80
+ENV MAPUPDATE_SERVICE_URL=map-update-service
+## Set url to Relocalization Service
+ENV RELOCALIZATION_SERVICE_URL=relocalization-service
 
 ## Set application log level
 ## Log level expected: DEBUG, CRITICAL, ERROR, INFO, TRACE, WARNING
