@@ -16,34 +16,17 @@ export XPCF_GRPC_MAX_SEND_MSG_SIZE=-1
 ## Log level expected: DEBUG, CRITICAL, ERROR, INFO, TRACE, WARNING
 export SOLAR_LOG_LEVEL=DEBUG
 
-## Set Map Update service url
-export MAPUPDATE_SERVICE_URL=0.0.0.0:50053
-## Set Relocalization service url
-export RELOCALIZATION_SERVICE_URL=0.0.0.0:50052
-
 # include dependencies path to ld_library_path
 ld_library_path="./"
-if [ -f "$PWD/SolARService_Mapping_Multi_modules.xml" ]; then
-        for modulePath in $(grep -o "\$XPCF_MODULE_ROOT.*lib" SolARService_Mapping_Multi_modules.xml)
-        do
-           modulePath=${modulePath/"\$XPCF_MODULE_ROOT"/${XPCF_MODULE_ROOT}}
-           if ! [[ $ld_library_path =~ "$modulePath/x86_64/shared/debug" ]]
-           then
-                  ld_library_path=$ld_library_path:$modulePath/x86_64/shared/debug
-           fi
-        done
-fi
 
-if [ -f "$PWD/SolARService_Mapping_Multi_modules_cuda.xml" ]; then
-        for modulePath in $(grep -o "\$XPCF_MODULE_ROOT.*lib" SolARService_Mapping_Multi_modules_cuda.xml)
-        do
-           modulePath=${modulePath/"\$XPCF_MODULE_ROOT"/${XPCF_MODULE_ROOT}}
-           if ! [[ $ld_library_path =~ "$modulePath/x86_64/shared/debug" ]]
-           then
-                  ld_library_path=$ld_library_path:$modulePath/x86_64/shared/debug
-           fi
-        done
-fi
+for modulePath in $(grep -o "\$XPCF_MODULE_ROOT.*lib" SolARService_Mapping_Multi_modules.xml)
+do
+   modulePath=${modulePath/"\$XPCF_MODULE_ROOT"/${XPCF_MODULE_ROOT}}
+   if ! [[ $ld_library_path =~ "$modulePath/x86_64/shared/debug" ]]
+   then
+          ld_library_path=$ld_library_path:$modulePath/x86_64/shared/debug
+   fi
+done
 
 echo LD_LIBRARY_PATH $ld_library_path
 

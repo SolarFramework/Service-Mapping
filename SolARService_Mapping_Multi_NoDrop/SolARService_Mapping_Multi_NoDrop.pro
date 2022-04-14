@@ -89,6 +89,17 @@ linux {
     }
     run_install.CONFIG += nostrip
     INSTALLS += run_install
+
+    run_install_cuda.path = $${TARGETDEPLOYDIR}
+    run_install_cuda.files = $${PWD}/start_mapping_multi_nodrop_service_cuda.sh
+    CONFIG(release,debug|release) {
+        run_install_cuda.extra = cp $$files($${PWD}/start_mapping_multi_nodrop_service_release_cuda.sh) $${PWD}/start_mapping_multi_nodrop_service_cuda.sh
+    }
+    CONFIG(debug,debug|release) {
+        run_install_cuda.extra = cp $$files($${PWD}/start_mapping_multi_nodrop_service_debug_cuda.sh) $${PWD}/start_mapping_multi_nodrop_service_cuda.sh
+    }
+    run_install_cuda.CONFIG += nostrip
+    INSTALLS += run_install_cuda
 }
 
 DISTFILES += \
@@ -111,7 +122,9 @@ DISTFILES += \
     docker/SolARServiceMappingMultiNoDrop.dockerfile \
     docker/start_server.sh \
     start_mapping_multi_nodrop_service_debug.sh \
-    start_mapping_multi_nodrop_service_release.sh
+    start_mapping_multi_nodrop_service_debug_cuda.sh \
+    start_mapping_multi_nodrop_service_release.sh \
+    start_mapping_multi_nodrop_service_release_cuda.sh
 
 xml_files.path = $${TARGETDEPLOYDIR}
 xml_files.files =  $$files($${PWD}/SolARService_Mapping_Multi_NoDrop_modules.xml) \
