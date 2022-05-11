@@ -95,8 +95,11 @@ auto fnClientMapping = []() {
 
         image->setImageEncoding(Image::ENCODING_JPEG);
         image->setImageEncodingQuality(80);
-
-        gMappingPipelineMulti->mappingProcessRequest(image, pose);
+        Transform3Df newTransform3D;
+        pipeline::MappingStatus status;
+        gMappingPipelineMulti->mappingProcessRequest(image, pose, T_M_W, newTransform3D, status);
+        if (!(T_M_W * newTransform3D.inverse()).isApprox(Transform3Df::Identity()))
+            T_M_W = newTransform3D;
 
         gImageViewer->display(image);
     }
