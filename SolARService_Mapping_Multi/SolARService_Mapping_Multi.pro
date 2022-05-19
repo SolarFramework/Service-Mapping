@@ -114,6 +114,7 @@ DISTFILES += \
     docker/build.sh \
     docker/build_cuda.sh \
     docker/launch.bat \
+    docker/launch_cuda.bat \
     docker/launch_cuda.sh \
     docker/start_server_cuda.sh \
     packagedependencies.txt \
