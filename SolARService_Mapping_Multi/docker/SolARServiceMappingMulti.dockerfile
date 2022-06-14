@@ -18,6 +18,7 @@ ADD data/fbow_voc/akaze.fbow /SolARServiceMappingMulti/data/fbow_voc/
 ## Libraries and modules
 RUN mkdir SolARServiceMappingMulti/modules
 ADD modules/* /SolARServiceMappingMulti/modules/
+ADD modules_common/* /SolARServiceMappingMulti/modules/
 ADD modules_no_cuda/* /SolARServiceMappingMulti/modules/
 
 ## Project files
