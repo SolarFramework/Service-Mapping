@@ -42,7 +42,7 @@ using namespace SolAR::api;
 using namespace SolAR::datastructure;
 namespace xpcf=org::bcom::xpcf;
 
-#define INDEX_USE_CAMERA 0
+#define INDEX_USE_CAMERA 1
 #define NB_IMAGES_BETWEEN_RELOCALIZATION 10  // number of read images between 2 requests for relocalization
 #define BUFFER_SIZE_FRAME 10    // Max images in Mapping buffer
 

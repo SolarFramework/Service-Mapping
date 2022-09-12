@@ -23,13 +23,13 @@ ADD data/data_hololens/loop_desktop_A/* /SolARServiceMappingMultiRelocalizationC
 RUN mkdir SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_A/000
 ADD data/data_hololens/loop_desktop_A/000/* /SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_A/000/
 RUN mkdir SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_A/001
-ADD data/data_hololens/loop_desktop_A/000/* /SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_A/001/
+ADD data/data_hololens/loop_desktop_A/001/* /SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_A/001/
 RUN mkdir SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_B
 ADD data/data_hololens/loop_desktop_B/* /SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_B/
 RUN mkdir SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_B/000
 ADD data/data_hololens/loop_desktop_B/000/* /SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_B/000/
 RUN mkdir SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_B/001
-ADD data/data_hololens/loop_desktop_B/000/* /SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_B/001/
+ADD data/data_hololens/loop_desktop_B/001/* /SolARServiceMappingMultiRelocalizationClient/data/data_hololens/loop_desktop_B/001/
 
 ## Libraries and modules
 RUN mkdir SolARServiceMappingMultiRelocalizationClient/modules
