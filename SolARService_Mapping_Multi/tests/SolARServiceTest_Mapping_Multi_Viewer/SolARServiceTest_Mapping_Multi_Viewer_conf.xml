@@ -49,9 +49,9 @@
                 <value>0</value>
             </property>
             <property name="cameraColor" type="uint">
+                <value>0</value>
                 <value>255</value>
-                <value>255</value>
-                <value>255</value>
+                <value>0</value>
             </property>
             <property name="drawCameraAxis" type="uint" value="1"/>
             <property name="drawSceneAxis" type="uint" value="0"/>
