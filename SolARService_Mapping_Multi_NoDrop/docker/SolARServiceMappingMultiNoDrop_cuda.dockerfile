@@ -18,6 +18,7 @@ ADD data/fbow_voc/popsift_uint8.fbow /SolARServiceMappingMultiNoDrop/data/fbow_v
 ## Libraries and modules
 RUN mkdir SolARServiceMappingMultiNoDrop/modules
 ADD modules/* /SolARServiceMappingMultiNoDrop/modules/
+ADD modules_common/* /SolARServiceMappingMultiNoDrop/modules/
 ADD modules_cuda/* /SolARServiceMappingMultiNoDrop/modules/
 
 ## Project files

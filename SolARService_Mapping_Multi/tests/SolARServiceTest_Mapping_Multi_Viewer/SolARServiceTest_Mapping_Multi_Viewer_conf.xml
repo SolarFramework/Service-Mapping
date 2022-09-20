@@ -42,23 +42,23 @@
                 <value>0</value>
                 <value>0</value>
             </property>
-            <property name="fixedPointsColor" type="uint" value="1"/>
+            <property name="fixedPointsColor" type="uint" value="0"/>
             <property name="pointsColor" type="uint">
                 <value>0</value>
                 <value>255</value>
                 <value>0</value>
             </property>
             <property name="cameraColor" type="uint">
+                <value>0</value>
                 <value>255</value>
-                <value>255</value>
-                <value>255</value>
+                <value>0</value>
             </property>
             <property name="drawCameraAxis" type="uint" value="1"/>
             <property name="drawSceneAxis" type="uint" value="0"/>
             <property name="drawWorldAxis" type="uint" value="1"/>
             <property name="axisScale" type="float" value="1.0"/>
             <property name="pointSize" type="float" value="1.0"/>
-            <property name="cameraScale" type="float" value="1.0"/>
+            <property name="cameraScale" type="float" value="0.2"/>
             <property name="keyframeAsCamera" type="uint" value="1"/>
             <property name="framesColor" type="uint">
                 <value>128</value>
