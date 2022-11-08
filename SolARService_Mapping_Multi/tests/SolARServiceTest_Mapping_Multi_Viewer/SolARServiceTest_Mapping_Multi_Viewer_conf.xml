@@ -21,8 +21,7 @@
     <properties>
         <!-- gRPC proxy configuration-->
         <configure component="IMappingPipeline_grpcProxy">
-            <property name="channelUrl" access="rw" type="string" value="192.168.60.22:32102"/>
-            <!--property name="channelUrl" access="rw" type="string" value="mapping-pipeline.artwin.b-com.com:31956"/-->
+            <property name="channelUrl" access="rw" type="string" value="0.0.0.0:50051"/>
             <property name="channelCredentials" access="rw" type="uint" value="0"/>
         </configure>
 <!--
