@@ -135,11 +135,7 @@
         <property name="outlierDistanceRatio" type="float" value="0.005"/>
     </configure>
     <configure component="SolARLoopClosureDetector">
-        <property name="minNbInliers" type="int" value="50"/>    /// @brief Request the point cloud of the global map stored by the map update pipeline
-        /// @param[out] pointCloud: the output point cloud
-        /// @return FrameworkReturnCode::_SUCCESS if the point cloud is available, else FrameworkReturnCode::_ERROR_
-        FrameworkReturnCode getPointCloudRequest(SRef<SolAR::datastructure::PointCloud> & pointCloud) const override;
-
+        <property name="minNbInliers" type="int" value="50"/>
     </configure>
     <configure component="SolARMatchesOverlayOpencv">
         <property name="thickness" type="uint" value="1"/>
