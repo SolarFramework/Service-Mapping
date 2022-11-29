@@ -113,7 +113,7 @@ auto fnClientProducer = []() {
         Transform3Df curTransform3D = Transform3Df::Identity();
         Transform3Df newTransform3D;
         pipeline::MappingStatus status;
-        gMappingPipelineMulti->mappingProcessRequest({image}, {pose}, curTransform3D, newTransform3D, status);
+        gMappingPipelineMulti->mappingProcessRequest({image}, {pose}, false, curTransform3D, newTransform3D, status);
 
         LOG_DEBUG("Producer client: gRPC request for (image, pose) number {} takes {} ms",
                  gNbImages, grpc_request_duration.elapsed() * 1000);

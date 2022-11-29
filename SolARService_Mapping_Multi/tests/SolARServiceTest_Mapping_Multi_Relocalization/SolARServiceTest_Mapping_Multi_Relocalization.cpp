@@ -97,7 +97,7 @@ auto fnClientMapping = []() {
         image->setImageEncodingQuality(80);
         Transform3Df newTransform3D;
         pipeline::MappingStatus status;
-        gMappingPipelineMulti->mappingProcessRequest({image}, {pose}, T_M_W, newTransform3D, status);
+        gMappingPipelineMulti->mappingProcessRequest({image}, {pose}, false, T_M_W, newTransform3D, status);
         if (!(T_M_W * newTransform3D.inverse()).isApprox(Transform3Df::Identity()))
             T_M_W = newTransform3D;
 
