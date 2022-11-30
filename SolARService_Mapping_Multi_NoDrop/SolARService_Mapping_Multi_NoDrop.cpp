@@ -27,6 +27,8 @@
 #include <boost/filesystem/detail/utf8_codecvt_facet.hpp>
 #include "core/Log.h"
 
+#include "api/pipeline/IServiceManagerPipeline.h"
+
 using namespace SolAR;
 
 namespace fs = boost::filesystem;
@@ -169,6 +171,22 @@ int main(int argc, char* argv[])
         return -1;
     }
 
+    // Get the external URL of the service
+    char * externalURL = getenv("SERVER_EXTERNAL_URL");
+    if (externalURL == nullptr) {
+     LOG_ERROR("The external URL of the service must be defined using the SERVER_EXTERNAL_URL env var!");
+     return -1;
+    }
+
+    LOG_DEBUG("Environment variable SERVER_EXTERNAL_URL: {}", externalURL);
+
+    // Get Service Manager proxy
+    auto serviceManager = cmpMgr->resolve<api::pipeline::IServiceManagerPipeline>();
+
+    LOG_DEBUG("Register the new service to the Service Manager with URL: {}", externalURL);
+
+    serviceManager->registerService(api::pipeline::ServiceType::MAPPING_SERVICE, std::string(externalURL));
+
     auto serverMgr = cmpMgr->resolve<xpcf::IGrpcServerManager>();
 
     // Check environment variables
@@ -201,6 +219,10 @@ int main(int argc, char* argv[])
               serverMgr->bindTo<xpcf::IConfigurable>()->getProperty("server_address")->getStringValue())
 
     serverMgr->runServer();
+
+    LOG_DEBUG("Unregister the service to the Service Manager");
+
+    serviceManager->unregisterService(api::pipeline::ServiceType::MAPPING_SERVICE, std::string(externalURL));
 
     return 0;
 }
