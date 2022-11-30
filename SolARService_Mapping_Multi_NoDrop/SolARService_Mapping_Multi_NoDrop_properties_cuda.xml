@@ -17,11 +17,6 @@
         <property name="channelCredentials" access="rw" type="uint" value="0"/>
     </configure>
 
-    <configure component="IRelocalizationPipeline_grpcProxy">
-        <property name="channelUrl" access="rw" type="string" value="0.0.0.0:60052"/>
-        <property name="channelCredentials" access="rw" type="uint" value="0"/>
-    </configure>
-
     <configure component="IMappingPipeline_grpcServer">
       <property name="grpc_compress_server" type="string">
         <value>method|getDataForVisualization|deflate|0</value>
