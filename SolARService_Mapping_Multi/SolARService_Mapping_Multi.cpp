@@ -29,6 +29,11 @@
 
 #include "api/pipeline/IServiceManagerPipeline.h"
 
+#include <iostream>
+#include <fstream>
+
+const std::string MAP_UPDATE_CONF_FILE = "./SolARService_Mapping_Multi_MapUpdate_conf.xml";
+
 using namespace SolAR;
 
 namespace fs = boost::filesystem;
@@ -69,6 +74,35 @@ void tryConfigureServer(SRef<xpcf::IGrpcServerManager> server, const std::string
             LOG_DEBUG("GrpcServerManager Property type not handled");
             break;
         }
+    }
+}
+
+void createMapUpdateConfigurationFile(std::string mapUpdateURL)
+{
+    LOG_DEBUG("Create Map Update service configuration file with URL: {}", mapUpdateURL);
+
+    // Open/create configuration file
+    std::ofstream confFile(MAP_UPDATE_CONF_FILE, std::ofstream::out);
+
+    // Check if file was successfully opened for writing
+    if (confFile.is_open())
+    {
+        confFile << "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>" << std::endl;
+        confFile << "<xpcf-registry autoAlias=\"true\">" << std::endl << std::endl;
+        confFile << "<properties>" << std::endl;
+        confFile << "    <!-- gRPC proxy configuration-->" << std::endl;
+        confFile << "    <configure component=\"IMapUpdatePipeline_grpcProxy\">" << std::endl;
+        confFile << "        <property name=\"channelUrl\" access=\"rw\" type=\"string\" value=\""
+                 << mapUpdateURL << "\"/>" << std::endl;
+        confFile << "        <property name=\"channelCredentials\" access=\"rw\" type=\"uint\" value=\"0\"/>" << std::endl;
+        confFile << "    </configure>" << std::endl << std::endl;
+        confFile << "</properties>" << std::endl << std::endl;
+        confFile << "</xpcf-registry>" << std::endl;
+
+        confFile.close();
+    }
+    else {
+        LOG_ERROR("Error when creating the Map Update service configuration file");
     }
 }
 
@@ -186,6 +220,24 @@ int main(int argc, char* argv[])
     LOG_DEBUG("Register the new service to the Service Manager with URL: {}", externalURL);
 
     serviceManager->registerService(api::pipeline::ServiceType::MAPPING_SERVICE, std::string(externalURL));
+
+    std::string mapUpdateURL = "";
+    serviceManager->getService(api::pipeline::ServiceType::MAP_UPDATE_SERVICE, mapUpdateURL);
+    if (mapUpdateURL == ""){
+        LOG_ERROR("No Map Update service available!");
+        return -1;
+    }
+
+    LOG_DEBUG("Map Update URL given by the Service Manager:{}", mapUpdateURL);
+
+    createMapUpdateConfigurationFile(mapUpdateURL);
+
+    LOG_INFO("Load the new Map Update properties configuration file: {}", MAP_UPDATE_CONF_FILE);
+
+    if (cmpMgr->load(MAP_UPDATE_CONF_FILE.c_str()) != org::bcom::xpcf::_SUCCESS) {
+        LOG_ERROR("Failed to load properties configuration file: {}", MAP_UPDATE_CONF_FILE);
+        return -1;
+    }
 
     auto serverMgr = cmpMgr->resolve<xpcf::IGrpcServerManager>();
 
