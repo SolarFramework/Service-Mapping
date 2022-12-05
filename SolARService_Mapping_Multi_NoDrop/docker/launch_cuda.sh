@@ -1,32 +1,32 @@
 #!/bin/sh
 
-# Get Map Update Service URL from parameters
+# Get service port from parameters
 if [ "$1" ]
 then
-    echo "Map Update Service URL = $1"
+    echo "Mapping No Drop service port = $1"
 else
-    echo "You need to give Map Update Service URL as first parameter!"
+    echo "You need to give Mapping No Drop service port as first parameter!"
     exit 1
 fi
 
-# Set MapUpdate Service URL
-export MAPUPDATE_SERVICE_URL=$1
+# Set Mapping No Drop service external URL
+export SERVER_EXTERNAL_URL=172.17.0.1:$1
 
-# Get Relocalization Service URL from parameters
+# Get Service Manager URL from parameters
 if [ "$2" ]
 then
-    echo "Relocalization Service URL = $2"
+    echo "Service Manager URL = $2"
 else
-    echo "You need to give Relocalization Service URL as second parameter!"
+    echo "You need to give Service Manager URL as parameter!"
     exit 1
 fi
 
-# Set Relocalization Service URL
-export RELOCALIZATION_SERVICE_URL=$2
+# Set Service Manager URL
+export SERVICE_MANAGER_URL=$2
 
 # Set application log level
 # Log level expected: DEBUG, CRITICAL, ERROR, INFO, TRACE, WARNING
 export SOLAR_LOG_LEVEL=INFO
 
 docker rm -f solarservicemappingmultinodropcuda
-docker run --gpus all -d -p 60051:8080 -e SOLAR_LOG_LEVEL -e MAPUPDATE_SERVICE_URL -e RELOCALIZATION_SERVICE_URL -e "SERVICE_NAME=SolARServiceMappingMultiNoDropCuda" --log-opt max-size=50m -e "SERVICE_TAGS=SolAR" --name solarservicemappingmultinodropcuda artwin/solar/services/mapping-multi-nodrop-cuda-service:latest
+docker run --gpus all -d -p $1:8080 -e SOLAR_LOG_LEVEL -e SERVER_EXTERNAL_URL -e SERVICE_MANAGER_URL -e "SERVICE_NAME=SolARServiceMappingMultiNoDropCuda" --log-opt max-size=50m -e "SERVICE_TAGS=SolAR" --name solarservicemappingmultinodropcuda artwin/solar/services/mapping-multi-nodrop-cuda-service:latest
