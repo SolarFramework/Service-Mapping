@@ -44,9 +44,9 @@
         <property name="minWeightNeighbor" type="float" value="20.0"/>
         <property name="displayTrackedPoints" type="int" value="1"/>
         <property name="thresAngleViewDirection" type="float" value="0.8"/>
-		<property name="nbPassedFrameAtLeast" type="int" value="2"/>
+        <property name="nbPassedFrameAtLeast" type="int" value="1"/>
         <property name="ratioCPRefKeyframe" type="float" value="0.5"/>
-        <property name="minTrackedPoints" type="int" value="200"/>
+        <property name="minTrackedPoints" type="int" value="100"/>
         <property name="nbVisibilityAtLeast" type="int" value="5"/>
     </configure>
     <configure component="SolARSLAMMapping">
@@ -67,29 +67,29 @@
         <property name="thresConfidence" type="float" value="0.03"/>
     </configure>
     <configure component="SolARDescritorsExtractorFromImagePopSift">
-		<property name="mode" type="string" value="PopSift"/>
-		<property name="imageMode" type="string" value="Unsigned Char"/>
-		<property name="nbOctaves" type="integer" value="3"/>
-		<property name="nbLevelPerOctave" type="integer" value="3"/>
-		<property name="sigma" type="float" value="1.6"/>
-		<property name="threshold" type="float" value="0.04"/>
-		<property name="edgeLimit" type="float" value="10.0"/>
-		<property name="downsampling" type="float" value="-1.0"/>
-		<property name="initialBlur" type="float" value="-1.0"/>
-		<property name="maxTotalKeypoints" type="uint" value="1000"/>
-	</configure>
+        <property name="mode" type="string" value="PopSift"/>
+        <property name="imageMode" type="string" value="Unsigned Char"/>
+        <property name="nbOctaves" type="integer" value="3"/>
+        <property name="nbLevelPerOctave" type="integer" value="3"/>
+        <property name="sigma" type="float" value="1.6"/>
+        <property name="threshold" type="float" value="0.001"/>
+        <property name="edgeLimit" type="float" value="10.0"/>
+        <property name="downsampling" type="float" value="-1.0"/>
+        <property name="initialBlur" type="float" value="-1.0"/>
+        <property name="maxTotalKeypoints" type="uint" value="1000"/>
+    </configure>
     <configure component="SolARDescriptorMatcherKNNOpencv">
         <property name="distanceRatio" type="float" value="0.8"/>
     </configure>
     <configure component="SolARDescriptorMatcherRegionOpencv">
         <property name="distanceRatio" type="float" value="0.8"/>
         <property name="radius" type="float" value="15"/>
-        <property name="matchingDistanceMax" type="float" value="300"/>
+        <property name="matchingDistanceMax" type="float" value="500"/>
     </configure>
     <configure component="SolARDescriptorMatcherGeometricOpencv">
         <property name="distanceRatio" type="float" value="0.8"/>
         <property name="paddingRatio" type="float" value="0.003"/>
-        <property name="matchingDistanceMax" type="float" value="300"/>
+        <property name="matchingDistanceMax" type="float" value="500"/>
     </configure>
     <configure component="SolARDescriptorMatcherHammingBruteForceOpencv">
         <property name="distanceRatio" type="float" value="0.9"/>
@@ -123,13 +123,13 @@
         <property name="threshold" type="float" value="0.01"/>
         <property name="level" type="int" value="3"/>
         <property name="matchingDistanceRatio" type="float" value="0.8"/>
-        <property name="matchingDistanceMax" type="float" value="300"/>
+        <property name="matchingDistanceMax" type="float" value="500"/>
     </configure>
     <configure component="SolAR3DTransformEstimationSACFrom3D3D">
         <property name="iterationsCount" type="int" value="500"/>
         <property name="reprojError" type="float" value="3.0"/>
         <property name="confidence" type="float" value="0.9"/>
-        <property name="minNbInliers" type="int" value="40"/>
+        <property name="minNbInliers" type="int" value="20"/>
     </configure>
     <configure component="SolARPoseFinderFrom2D2DOpencv">
         <property name="confidence" type="float" value="0.99"/>
