@@ -1,32 +1,32 @@
 ECHO off
 
-REM Get Map Update Service URL from parameters
+REM Get service port from parameters
 IF "%1"=="" (
-    ECHO You need to give Map Update URL as first parameter!
+    ECHO You need to give Mapping No Drop service port as first parameter!
     GOTO end
 ) ELSE (
-    ECHO Map Update Service URL = %1
+    ECHO Mapping No Drop service port = %1
 )
 
-REM Set Map Update Service URL
-SET MAPUPDATE_SERVICE_URL=%1
+REM Set Mapping No Drop service external URL
+SET SERVER_EXTERNAL_URL=172.17.0.1:%1
 
-REM Get Relocalization Service URL from parameters
+REM Get Service Manager URL from parameters
 IF "%2"=="" (
-    ECHO You need to give Relocalization service URL as second parameter!
+    ECHO You need to give Service Manager URL as second parameter!
     GOTO end
 ) ELSE (
-    ECHO Relocalization Service URL = %2
+    ECHO Service Manager Service URL = %2
 )
 
-REM Set Relocalization Service URL
-SET RELOCALIZATION_SERVICE_URL=%2
+REM Set Service Manager URL
+SET SERVICE_MANAGER_URL=%2
 
 REM Set application log level
 REM Log level expected: DEBUG, CRITICAL, ERROR, INFO, TRACE, WARNING
 SET SOLAR_LOG_LEVEL=INFO
 
 docker rm -f solarservicemappingmultinodrop
-docker run -d -p 50051:8080 -e SOLAR_LOG_LEVEL -e MAPUPDATE_SERVICE_URL -e RELOCALIZATION_SERVICE_URL -e "SERVICE_NAME=SolARServiceMappingMultiNoDrop" --log-opt max-size=50m -e "SERVICE_TAGS=SolAR" --name solarservicemappingmultinodrop artwin/solar/services/mapping-multi-nodrop-service:latest
+docker run -d -p %1:8080 -e SOLAR_LOG_LEVEL -e SERVER_EXTERNAL_URL -e SERVICE_MANAGER_URL -e "SERVICE_NAME=SolARServiceMappingMultiNoDrop" --log-opt max-size=50m -e "SERVICE_TAGS=SolAR" --name solarservicemappingmultinodrop artwin/solar/services/mapping-multi-nodrop-service:latest
 
 :end

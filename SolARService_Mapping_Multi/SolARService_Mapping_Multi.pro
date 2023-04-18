@@ -6,7 +6,7 @@ QMAKE_PROJECT_DEPTH = 0
 
 ## global defintions : target lib name, version
 TARGET = SolARService_Mapping_Multi
-VERSION=1.0.0
+VERSION=1.1.0
 PROJECTDEPLOYDIR = $${PWD}/../deploy
 
 CONFIG += c++1z
@@ -77,7 +77,7 @@ win32 {
     QMAKE_COMPILER_DEFINES += _WIN64
 
     # Windows Kit (msvc2013 64)
-    LIBS += -L$$(WINDOWSSDKDIR)lib/winv6.3/um/x64 -lshell32 -lgdi32 -lComdlg32
+    LIBS += -L$$(WINDOWSSDKDItR)lib/winv6.3/um/x64 -lshell32 -lgdi32 -lComdlg32
     INCLUDEPATH += $$(WINDOWSSDKDIR)lib/winv6.3/um/x64
 }
 
