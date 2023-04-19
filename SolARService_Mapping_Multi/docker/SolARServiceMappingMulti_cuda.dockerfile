@@ -13,7 +13,7 @@ RUN mkdir SolARServiceMappingMulti
 ## Data files (fbow vocabulary)
 RUN mkdir SolARServiceMappingMulti/data
 RUN mkdir SolARServiceMappingMulti/data/fbow_voc
-ADD data/fbow_voc/popsift_uint8.fbow /SolARServiceMappingMulti/data/fbow_voc/
+ADD data/fbow_voc/popsift_uint8_indoor.fbow /SolARServiceMappingMulti/data/fbow_voc/
 
 ## Libraries and modules
 RUN mkdir SolARServiceMappingMulti/modules
