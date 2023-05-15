@@ -41,7 +41,7 @@
         <property name="thresAngleViewDirection" type="float" value="0.8"/>
         <property name="nbPassedFrameAtLeast" type="int" value="1"/>
         <property name="ratioCPRefKeyframe" type="float" value="0.5"/>
-        <property name="minTrackedPoints" type="int" value="100"/>
+        <property name="minTrackedPoints" type="int" value="400"/>
         <property name="nbVisibilityAtLeast" type="int" value="5"/>
     </configure>
     <configure component="SolARSLAMMapping">
@@ -74,7 +74,7 @@
         <property name="threshold" type="float" value="3e-4"/>
     </configure>
     <configure component="SolARDescriptorMatcherKNNOpencv">
-        <property name="distanceRatio" type="float" value="0.8"/>
+        <property name="distanceRatio" type="float" value="0.9"/>
     </configure>
     <configure component="SolARDescriptorMatcherRegionOpencv">
         <property name="distanceRatio" type="float" value="0.8"/>
@@ -82,7 +82,7 @@
         <property name="matchingDistanceMax" type="float" value="500"/>
     </configure>
     <configure component="SolARDescriptorMatcherGeometricOpencv">
-        <property name="distanceRatio" type="float" value="0.7"/>
+        <property name="distanceRatio" type="float" value="0.8"/>
         <property name="paddingRatio" type="float" value="0.003"/>
         <property name="matchingDistanceMax" type="float" value="500"/>
     </configure>
@@ -94,8 +94,8 @@
     </configure>
     <configure component="SolARGeometricMatchesFilterOpencv">
         <property name="confidence" type="float" value="0.99"/>
-        <property name="outlierDistanceRatio" type="float" value="0.005"/>
-        <property name="epilinesDistance" type="float" value="10.0"/>
+        <property name="outlierDistanceRatio" type="float" value="0.015"/>
+        <property name="epilinesDistance" type="float" value="3.0"/>
     </configure>
     <configure component="SolARPoseEstimationSACPnpOpencv">
         <property name="iterationsCount" type="int" value="500"/>

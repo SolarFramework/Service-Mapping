@@ -111,7 +111,6 @@ DISTFILES += \
     docker/build_cuda.sh \
     docker/launch.bat \
     docker/launch_cuda.sh \
-    docker/mapping-nodrop-service-manifest.yaml \
     docker/start_server_cuda.sh \
     packagedependencies.txt \
     docker/build.sh \

@@ -120,7 +120,6 @@ DISTFILES += \
     docker/build.sh \
     docker/launch.bat \
     docker/launch.sh \
-    docker/mapping-service-manifest.yaml \
     docker/SolARServiceMappingMulti.dockerfile \
     docker/start_server.sh \
     start_mapping_multi_service_debug.sh \

@@ -234,7 +234,7 @@ int main(int argc, char* argv[])
     }
     else if (options.count("version"))
     {
-        std::cout << "SolARServiceTest_MapUpdate version " << MYVERSION << std::endl << std::endl;
+        std::cout << "SolARServiceTest_Mapping_Multi_Producer version " << MYVERSION << std::endl << std::endl;
         return 0;
     }
     else {
