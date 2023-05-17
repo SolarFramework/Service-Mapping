@@ -12,13 +12,8 @@
     </configure>
 -->
     <!-- gRPC proxy configuration-->
-    <configure component="IMapUpdatePipeline_grpcProxy">
-        <property name="channelUrl" access="rw" type="string" value="0.0.0.0:50053"/>
-        <property name="channelCredentials" access="rw" type="uint" value="0"/>
-    </configure>
-	
-	<configure component="IRelocalizationPipeline_grpcProxy">
-        <property name="channelUrl" access="rw" type="string" value="0.0.0.0:50052"/>
+    <configure component="IServiceManagerPipeline_grpcProxy">
+        <property name="channelUrl" access="rw" type="string" value="0.0.0.0:50059"/>
         <property name="channelCredentials" access="rw" type="uint" value="0"/>
     </configure>
 
@@ -46,7 +41,7 @@
         <property name="thresAngleViewDirection" type="float" value="0.8"/>
         <property name="nbPassedFrameAtLeast" type="int" value="1"/>
         <property name="ratioCPRefKeyframe" type="float" value="0.5"/>
-        <property name="minTrackedPoints" type="int" value="100"/>
+        <property name="minTrackedPoints" type="int" value="400"/>
         <property name="nbVisibilityAtLeast" type="int" value="5"/>
     </configure>
     <configure component="SolARSLAMMapping">
@@ -79,7 +74,7 @@
         <property name="threshold" type="float" value="3e-4"/>
     </configure>
     <configure component="SolARDescriptorMatcherKNNOpencv">
-        <property name="distanceRatio" type="float" value="0.8"/>
+        <property name="distanceRatio" type="float" value="0.9"/>
     </configure>
     <configure component="SolARDescriptorMatcherRegionOpencv">
         <property name="distanceRatio" type="float" value="0.8"/>
@@ -99,7 +94,7 @@
     </configure>
     <configure component="SolARGeometricMatchesFilterOpencv">
         <property name="confidence" type="float" value="0.99"/>
-        <property name="outlierDistanceRatio" type="float" value="0.005"/>
+        <property name="outlierDistanceRatio" type="float" value="0.015"/>
         <property name="epilinesDistance" type="float" value="3.0"/>
     </configure>
     <configure component="SolARPoseEstimationSACPnpOpencv">
@@ -120,7 +115,7 @@
     </configure>
     <configure component="SolARKeyframeRetrieverFBOW">
         <property name="VOCpath" type="string" value="../../../../../data/fbow_voc/akaze.fbow"/>
-        <property name="threshold" type="float" value="0.01"/>
+        <property name="threshold" type="float" value="0.005"/>
         <property name="level" type="int" value="3"/>
         <property name="distanceMetricId" type="int" value="0" description="0:L2; 1:L1; 2:ChiSquare; 3:BHATTACHARYYA; 4:DotProduct; 5:KLS"/>
         <property name="matchingDistanceRatio" type="float" value="0.8"/>

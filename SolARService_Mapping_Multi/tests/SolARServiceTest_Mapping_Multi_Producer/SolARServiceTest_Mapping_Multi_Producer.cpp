@@ -29,6 +29,7 @@
 
 #include "core/Log.h"
 #include "api/pipeline/IMappingPipeline.h"
+#include "api/pipeline/IServiceManagerPipeline.h"
 #include "api/input/devices/IARDevice.h"
 #include "api/display/IImageViewer.h"
 
@@ -46,6 +47,12 @@ SRef<xpcf::IComponentManager> gXpcfComponentManager = 0;
 
 // Global Mapping Pipeline Multithreads instance
 SRef<pipeline::IMappingPipeline> gMappingPipelineMulti = 0;
+// Global Service Manager instance
+SRef<pipeline::IServiceManagerPipeline> gServiceManager = 0;
+// Global Client UUID for Service Manager requests
+std::string gClientUUID = "";
+// Global URL to Relocalization Service
+std::string gRelocalizationServiceURL = "";
 
 // Global client threads
 xpcf::DelegateTask * gClientProducerTask = 0;
@@ -130,6 +137,9 @@ auto fnClientProducer = []() {
 
         LOG_INFO("End of test");
 
+        LOG_INFO("Unlock Relocalization Service");
+        gServiceManager->unlockService(pipeline::ServiceType::RELOCALIZATION_SERVICE, gClientUUID);
+
         exit(0);
     }
 };
@@ -188,6 +198,9 @@ static void SigInt(int signo) {
     if (gMappingPipelineMulti != 0)
         gMappingPipelineMulti->stop();
 
+    LOG_INFO("Unlock Relocalization Service");
+    gServiceManager->unlockService(pipeline::ServiceType::RELOCALIZATION_SERVICE, gClientUUID);
+
     LOG_INFO("End of test");
 
     exit(0);
@@ -199,7 +212,7 @@ int main(int argc, char* argv[])
         boost::log::core::get()->set_logging_enabled(false);
     #endif
 
-    LOG_ADD_LOG_TO_CONSOLE();
+    LOG_ADD_LOG_TO_CONSOLE();    
 
     // Signal interruption function (Ctrl + C)
     signal(SIGINT, SigInt);
@@ -210,6 +223,8 @@ int main(int argc, char* argv[])
             ("h,help", "display this help and exit")
             ("v,version", "display version information and exit")
             ("f,file", "xpcf grpc client configuration file",
+             cxxopts::value<string>())
+            ("client-uuid", "set the client UUID",
              cxxopts::value<string>());
 
     auto options = option_list.parse(argc, argv);
@@ -219,12 +234,18 @@ int main(int argc, char* argv[])
     }
     else if (options.count("version"))
     {
-        std::cout << "SolARServiceTest_MapUpdate version " << MYVERSION << std::endl << std::endl;
+        std::cout << "SolARServiceTest_Mapping_Multi_Producer version " << MYVERSION << std::endl << std::endl;
         return 0;
     }
-    else if (!options.count("file") || options["file"].as<string>().empty()) {
-        print_error("missing one of file or database dir argument");
-        return 1;
+    else {
+        if (!options.count("file") || options["file"].as<string>().empty()) {
+            print_error("missing one of file or database dir argument");
+            return 1;
+        }
+        if (!options.count("client-uuid") || options["client-uuid"].as<string>().empty()) {
+            print_error("missing client UUID");
+            return 1;
+        }
     }
 
     try {
@@ -271,11 +292,16 @@ int main(int argc, char* argv[])
         {
             LOG_INFO("Resolve IMappingPipeline interface");
             gMappingPipelineMulti = gXpcfComponentManager->resolve<SolAR::api::pipeline::IMappingPipeline>();
+            LOG_INFO("Resolve IServiceManagerPipeline interface");
+            gServiceManager = gXpcfComponentManager->resolve<pipeline::IServiceManagerPipeline>();
         }
         else {
-            LOG_INFO("Failed to load Client Remote Mapping Pipeline configuration file: {}", file);
+            LOG_ERROR("Failed to load Client Remote Mapping Pipeline configuration file: {}", file);
             return -1;
         }
+
+        gClientUUID = options["client-uuid"].as<string>();
+        LOG_INFO("Get the Client UUID: {}", gClientUUID);
 
         SolAR::FrameworkReturnCode result;
 
@@ -292,7 +318,14 @@ int main(int argc, char* argv[])
             CameraRigParameters camRigParams = gArDevice->getCameraParameters();
             CameraParameters camParams = camRigParams.cameraParams[INDEX_USE_CAMERA];
 
-            result = gMappingPipelineMulti->init();
+            LOG_INFO("Get and lock a Relocalization Service URL from the Service Manager");
+            if (gServiceManager->getAndLockService(pipeline::ServiceType::RELOCALIZATION_SERVICE,
+                                                   gClientUUID, gRelocalizationServiceURL) != FrameworkReturnCode::_SUCCESS) {
+                LOG_ERROR("Failed to get the Relocalization Service URL!");
+                return -1;
+            }
+
+            result = gMappingPipelineMulti->init(gRelocalizationServiceURL);
             LOG_INFO("Remote producer client: Init mapping pipeline result = {}",
                      getReturnCodeTextValue(result));
 
@@ -312,11 +345,13 @@ int main(int argc, char* argv[])
                 }
                 else {
                     LOG_ERROR("Cannot start mapping pipeline");
+                    gServiceManager->unlockService(pipeline::ServiceType::RELOCALIZATION_SERVICE, gClientUUID);
                     return -1;
                 }
             }
             else {
                 LOG_ERROR("Cannot initialize mapping pipeline");
+                gServiceManager->unlockService(pipeline::ServiceType::RELOCALIZATION_SERVICE, gClientUUID);
                 return -1;
             }
         }

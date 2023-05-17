@@ -77,7 +77,7 @@ win32 {
     QMAKE_COMPILER_DEFINES += _WIN64
 
     # Windows Kit (msvc2013 64)
-    LIBS += -L$$(WINDOWSSDKDIR)lib/winv6.3/um/x64 -lshell32 -lgdi32 -lComdlg32
+    LIBS += -L$$(WINDOWSSDKDItR)lib/winv6.3/um/x64 -lshell32 -lgdi32 -lComdlg32
     INCLUDEPATH += $$(WINDOWSSDKDIR)lib/winv6.3/um/x64
 }
 
@@ -121,7 +121,6 @@ DISTFILES += \
     docker/build.sh \
     docker/launch.bat \
     docker/launch.sh \
-    docker/mapping-service-manifest.yaml \
     docker/SolARServiceMappingMulti.dockerfile \
     docker/start_server.sh \
     start_mapping_multi_service_debug.sh \
