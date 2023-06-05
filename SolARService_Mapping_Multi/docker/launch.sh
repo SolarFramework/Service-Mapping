@@ -28,5 +28,19 @@ export SERVICE_MANAGER_URL=$2
 # Log level expected: DEBUG, CRITICAL, ERROR, INFO, TRACE, WARNING
 export SOLAR_LOG_LEVEL=INFO
 
+docker volume create --driver local \
+  --opt type=none \
+  --opt device=/etc/arcad/config_files/config_files_mapping \
+  --opt o=bind config_files_mapping
+
 docker rm -f solarservicemappingmulti
-docker run -d -p $1:8080 -e SOLAR_LOG_LEVEL -e SERVER_EXTERNAL_URL -e SERVICE_MANAGER_URL -e "SERVICE_NAME=SolARServiceMappingMulti" --log-opt max-size=50m -e "SERVICE_TAGS=SolAR" --name solarservicemappingmulti artwin/solar/services/mapping-multi-service:latest
+
+docker run -d -p $1:8080 \
+-v config_files_mapping:/.xpcf \
+-e SOLAR_LOG_LEVEL \
+-e SERVER_EXTERNAL_URL \
+-e SERVICE_MANAGER_URL \
+-e "SERVICE_NAME=SolARServiceMappingMulti" \
+--log-opt max-size=50m \
+-e "SERVICE_TAGS=SolAR" \
+--name solarservicemappingmulti artwin/solar/services/mapping-multi-service:latest
