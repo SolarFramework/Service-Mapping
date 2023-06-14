@@ -44,14 +44,6 @@ This service is based on the Mapping Multi pipeline.
 in the "./bin/Release" or "./bin/Debug" folder:
 
 	./start_mapping_multi_service.sh
-	
-### Mapping Multi No Drop service
-
-This service is based on the Mapping Multi No Drop pipeline.
-
-in the "./bin/Release" or "./bin/Debug" folder:
-
-	./start_mapping_multi_nodrop_service.sh
 
 ## Build Docker images (Linux only)
 
