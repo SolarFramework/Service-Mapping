@@ -37,7 +37,7 @@
         </configure>
         <configure component="SolARSLAMTracking">
             <property name="minWeightNeighbor" type="float" value="20.0"/>
-            <property name="displayTrackedPoints" type="int" value="1"/>
+            <property name="displayTrackedPoints" type="int" value="0"/>
             <property name="thresAngleViewDirection" type="float" value="0.8"/>
             <property name="nbPassedFrameAtLeast" type="int" value="1"/>
             <property name="ratioCPRefKeyframe" type="float" value="0.5"/>
