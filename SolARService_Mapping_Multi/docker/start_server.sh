@@ -1,52 +1,30 @@
 #!/bin/sh
 
-## Detect MAPUPDATE_SERVICE_URL var and use its value 
-## to set the Map Update service URL in XML configuration file
+## Detect SERVICE_MANAGER_URL var and use its value
+## to set the Service Manager URL in XML configuration file
 
-if [ -z "$MAPUPDATE_SERVICE_URL" ]
+if [ -z "$SERVICE_MANAGER_URL" ]
 then
-    echo "Error: You must define MAPUPDATE_SERVICE_URL env var with the MapUpdate Service URL"
-    exit 1 
-else
-    ## Detect port in service URL
-    if echo "$MAPUPDATE_SERVICE_URL" | grep -q ":"
-    then
-        echo "Port is defined in MapUpdate service URL"
-    else
-        echo "No port set in MapUpdate service URL: add port 80 (default)"
-        export MAPUPDATE_SERVICE_URL="${MAPUPDATE_SERVICE_URL}:80"
-    fi
-
-    echo "MAPUPDATE_SERVICE_URL defined: $MAPUPDATE_SERVICE_URL"
-fi
-
-echo "Try to replace the MapUpdate Service URL in the XML configuration file..."
-
-sed -i -e "s/MAPUPDATE_SERVICE_URL/$MAPUPDATE_SERVICE_URL/g" /.xpcf/SolARService_Mapping_Multi_properties.xml
-
-## Detect RELOCALIZATION_SERVICE_URL var and use its value
-## to set the Relocalization service URL in XML configuration file
-
-if [ -z "$RELOCALIZATION_SERVICE_URL" ]
-then
-    echo "Error: You must define RELOCALIZATION_SERVICE_URL env var with the Relocalization Service URL"
+    echo "Error: You must define SERVICE_MANAGER_URL env var with the Service Manager URL"
     exit 1
 else
     ## Detect port in service URL
-    if echo "$RELOCALIZATION_SERVICE_URL" | grep -q ":"
+    if echo "$SERVICE_MANAGER_URL" | grep -q ":"
     then
-        echo "Port is defined in Relocalization service URL"
+        echo "Port is defined in Service Manager URL"
     else
-        echo "No port set in Relocalization service URL: add port 80 (default)"
-        export RELOCALIZATION_SERVICE_URL="${RELOCALIZATION_SERVICE_URL}:80"
+        echo "No port set in Service Manager URL: add port 80 (default)"
+        export SERVICE_MANAGER_URL="${SERVICE_MANAGER_URL}:80"
     fi
 
-    echo "RELOCALIZATION_SERVICE_URL defined: $RELOCALIZATION_SERVICE_URL"
+    echo "SERVICE_MANAGER_URL defined: $SERVICE_MANAGER_URL"
 fi
 
-echo "Try to replace the Relocalization Service URL in the XML configuration file..."
+echo "Try to replace the Service Manager URL in the XML configuration file..."
 
-sed -i -e "s/RELOCALIZATION_SERVICE_URL/$RELOCALIZATION_SERVICE_URL/g" /.xpcf/SolARService_Mapping_Multi_properties.xml
+cp /.xpcf/SolARService_Mapping_Multi_properties.xml /tmp/
+
+sed -i -e "s/SERVICE_MANAGER_URL/$SERVICE_MANAGER_URL/g" /tmp/SolARService_Mapping_Multi_properties.xml
 
 echo "XML configuration file ready"
 
@@ -54,5 +32,5 @@ export LD_LIBRARY_PATH=/SolARServiceMappingMulti:/SolARServiceMappingMulti/modul
 
 ## Start client
 cd /SolARServiceMappingMulti
-./SolARService_Mapping_Multi -m /.xpcf/SolARService_Mapping_Multi_modules.xml -p /.xpcf/SolARService_Mapping_Multi_properties.xml
+./SolARService_Mapping_Multi -m /.xpcf/SolARService_Mapping_Multi_modules.xml -p /tmp/SolARService_Mapping_Multi_properties.xml
 

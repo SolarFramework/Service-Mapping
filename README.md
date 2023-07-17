@@ -16,7 +16,7 @@ To install the required data, just launch the following script:
 
 This script will install the following data into the `./data` folder:
 - The bag of words downloaded from our [GitHub releases](https://github.com/SolarFramework/binaries/releases/download/fbow%2F0.0.1%2Fwin/fbow_voc.zip) and unzipped in the `./data` folder.
-- Hololens captures (image and poses) downloaded from our Artifactory ([Loop_Desktop_A](https://artifact.b-com.com/solar-generic-local/captures/hololens/bcomLab/loopDesktopA.zip) and [Loop_Desktop_B](https://artifact.b-com.com/solar-generic-local/captures/hololens/bcomLab/loopDesktopB.zip)) and copied into the `./data/data_hololens` folder.
+- Hololens captures (image and poses) downloaded from our Artifactory ([Loop_Desktop_A](https://repository.solarframework.org/generic/captures/hololens/bcomLab/loopDesktopA.zip) and [Loop_Desktop_B](https://repository.solarframework.org/generic/captures/hololens/bcomLab/loopDesktopB.zip)) and copied into the `./data/data_hololens` folder.
 
 <strong>Loop_Desktop_A</strong> is a video sequence captured with a Hololens 1 around a desktop starting and finishing with the fiducial Marker A with a loop trajectory. A fiducial marker B is captured during the trajectory.
 
@@ -44,14 +44,6 @@ This service is based on the Mapping Multi pipeline.
 in the "./bin/Release" or "./bin/Debug" folder:
 
 	./start_mapping_multi_service.sh
-	
-### Mapping Multi No Drop service
-
-This service is based on the Mapping Multi No Drop pipeline.
-
-in the "./bin/Release" or "./bin/Debug" folder:
-
-	./start_mapping_multi_nodrop_service.sh
 
 ## Build Docker images (Linux only)
 

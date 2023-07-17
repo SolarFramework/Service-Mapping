@@ -6,7 +6,7 @@ QMAKE_PROJECT_DEPTH = 0
 
 ## global defintions : target lib name, version
 TARGET = SolARService_Mapping_Multi
-VERSION=0.11.0
+VERSION=1.0.0
 PROJECTDEPLOYDIR = $${PWD}/../deploy
 
 CONFIG += c++1z
@@ -60,24 +60,13 @@ linux {
     LIBS += -ldl
 }
 
-
-macx {
-    DEFINES += _MACOS_TARGET_
-    QMAKE_MAC_SDK= macosx
-    QMAKE_CFLAGS += -mmacosx-version-min=10.7 #-x objective-c++
-    QMAKE_CXXFLAGS += -mmacosx-version-min=10.7  -std=c++17 -fPIC#-x objective-c++
-    QMAKE_LFLAGS += -mmacosx-version-min=10.7 -v -lstdc++
-    LIBS += -lstdc++ -lc -lpthread
-    LIBS += -L/usr/local/lib
-}
-
 win32 {
     QMAKE_LFLAGS += /MACHINE:X64
     DEFINES += WIN64 UNICODE _UNICODE
     QMAKE_COMPILER_DEFINES += _WIN64
 
     # Windows Kit (msvc2013 64)
-    LIBS += -L$$(WINDOWSSDKDIR)lib/winv6.3/um/x64 -lshell32 -lgdi32 -lComdlg32
+    LIBS += -L$$(WINDOWSSDKDItR)lib/winv6.3/um/x64 -lshell32 -lgdi32 -lComdlg32
     INCLUDEPATH += $$(WINDOWSSDKDIR)lib/winv6.3/um/x64
 }
 
@@ -121,7 +110,6 @@ DISTFILES += \
     docker/build.sh \
     docker/launch.bat \
     docker/launch.sh \
-    docker/mapping-service-manifest.yaml \
     docker/SolARServiceMappingMulti.dockerfile \
     docker/start_server.sh \
     start_mapping_multi_service_debug.sh \

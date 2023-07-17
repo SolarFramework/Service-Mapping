@@ -6,7 +6,7 @@ QMAKE_PROJECT_DEPTH = 0
 
 ## global defintions : target lib name, version
 TARGET = SolARServiceTest_Mapping_Multi_Producer
-VERSION=0.11.0
+VERSION=1.0.0
 PROJECTDEPLOYDIR = $${PWD}/../../../deploy
 
 DEFINES += MYVERSION=\"\\\"$${VERSION}\\\"\"
@@ -51,18 +51,6 @@ unix {
 
 linux {
     LIBS += -ldl
-}
-
-macx {
-    DEFINES += _MACOS_TARGET_
-    QMAKE_MAC_SDK= macosx
-    QMAKE_CFLAGS += -mmacosx-version-min=10.7 #-x objective-c++
-    QMAKE_CXXFLAGS += -mmacosx-version-min=10.7  -std=c++17 -fPIC#-x objective-c++
-    QMAKE_LFLAGS += -mmacosx-version-min=10.7 -v -lstdc++
-    INCLUDEPATH += ../../libs/cppast/external/cxxopts/include
-    LIBS += -lstdc++ -lc -lpthread
-    LIBS += -L/usr/local/lib
-    INCLUDEPATH += $${REMAKENDEPSFOLDER}/$${BCOM_TARGET_PLATFORM}/xpcfSampleComponent/$$VERSION/interfaces
 }
 
 win32 {

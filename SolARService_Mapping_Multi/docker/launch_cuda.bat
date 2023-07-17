@@ -1,30 +1,41 @@
 ECHO off
 
-REM Get Map Update Service URL from parameters
+REM Get service port from parameters
 IF "%1"=="" (
-    ECHO You need to give Map Update service URL as first parameter!
+    ECHO You need to give Mapping service port as first parameter!
     GOTO end
 ) ELSE (
-    ECHO Map Update Service URL = %1
+    ECHO Mapping service port = %1
 )
 
-REM Set Map Update Service URL
-SET MAPUPDATE_SERVICE_URL=%1
+REM Set Mapping service external URL
+SET SERVER_EXTERNAL_URL=172.17.0.1:%1
 
-REM Get Relocalization Service URL from parameters
+REM Get Service Manager URL from parameters
 IF "%2"=="" (
-    ECHO You need to give Relocalization service URL as second parameter!
+    ECHO You need to give Service Manager URL as second parameter!
     GOTO end
 ) ELSE (
-    ECHO Relocalization Service URL = %2
+    ECHO Service Manager Service URL = %2
 )
 
-REM Set Relocalization Service URL
-SET RELOCALIZATION_SERVICE_URL=%2
+REM Set Service Manager URL
+SET SERVICE_MANAGER_URL=%2
 
 REM Set application log level
 REM Log level expected: DEBUG, CRITICAL, ERROR, INFO, TRACE, WARNING
 SET SOLAR_LOG_LEVEL=INFO
 
+
+REM Define path for local configuration files
+SET CONFIG_FILE_PATH=%USERPROFILE%\.arcad\config_files\config_files_mapping
+
+mkdir %CONFIG_FILE_PATH%
+
+docker volume create --driver local --opt type="none" --opt device=%CONFIG_FILE_PATH% --opt o="bind" config_files_mapping
+
 docker rm -f solarservicemappingmulticuda
-docker run --gpus all -d -p 60051:8080 -e SOLAR_LOG_LEVEL -e MAPUPDATE_SERVICE_URL -e RELOCALIZATION_SERVICE_URL -e "SERVICE_NAME=SolARServiceMappingMultiCuda" --log-opt max-size=50m -e "SERVICE_TAGS=SolAR" --name solarservicemappingmulticuda artwin/solar/services/mapping-multi-cuda-service:latest
+
+docker run --gpus all -d -p %1:8080 -v config_files_mapping:/.xpcf -e SOLAR_LOG_LEVEL -e SERVER_EXTERNAL_URL -e SERVICE_MANAGER_URL -e "SERVICE_NAME=SolARServiceMappingMultiCuda" --log-opt max-size=50m -e "SERVICE_TAGS=SolAR" --name solarservicemappingmulticuda artwin/solar/services/mapping-multi-cuda-service:latest
+
+:end

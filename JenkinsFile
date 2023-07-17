@@ -10,9 +10,7 @@ node("master") {
         "SolARService_Mapping_Multi,\
          SolARService_Mapping_Multi/tests/SolARServiceTest_Mapping_Multi_Producer,\
          SolARService_Mapping_Multi/tests/SolARServiceTest_Mapping_Multi_Viewer,\
-         SolARService_Mapping_Multi/tests/SolARServiceTest_Mapping_Multi_Relocalization,\
-         SolARService_Mapping_Multi_NoDrop"
-        android=false
+         SolARService_Mapping_Multi/tests/SolARServiceTest_Mapping_Multi_Relocalization"
 	win=false
         packageScripts="bundleServices"
     }
